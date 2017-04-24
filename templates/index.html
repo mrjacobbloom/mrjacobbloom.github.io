@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{#  {% set pagename = 'Home' %}    #}
+{% block body %}
+  <p>
+    Hey, I'm Jacob! I'm a sophomore studying Computer Science at <strong>University of Colorado Boulder</strong>, and I work for the campus doing tech support over the phone. I specialize in web design and Node.js development, but I have experience in Python and C++ as well.
+  </p>
+  <p>
+    I'm also a musician. I'm involved in community theatre and I sing with an <em>a cappella</em> group called <strong>In the Buff</strong>. I also play the piano. Once a month, I sing the oldies in a jam called <strong>Boulder Friends of Jazz</strong>. Check out my portfolio below, and feel free to <a href="mailto:mr.jacob.bloom@gmail.com">contact me</a> for any reason.
+  </p>
+  <div class="hero-mom">
+    <a href="code/" class="hero">
+      <div class="hero-bg">
+        <video autoplay loop src="resources/video/dot_dance.mov"></video>
+      </div>
+      <div class="hero-content">Code</div>
+    </a>
+    <a href="music/" class="hero">
+      <div class="hero-bg">
+        <video autoplay loop src="resources/video/im_beginning_to_see_the_light.mp4"></video>
+      </div>
+      <div class="hero-content">Music</div>
+    </a>
+  </div>
+{% endblock %}

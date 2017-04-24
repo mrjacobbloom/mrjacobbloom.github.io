@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta property="og:title" content="{{ name }}">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:description" content="{{ description }}">
+    
+    <link rel="icon" href="/favicon.ico">
+    {% if pagename %}
+      <title>{{pagename}} | {{name}}</title>
+    {%else %}
+      <title>{{name}}</title>
+    {% endif %}
+    
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Merriweather" rel="stylesheet">
+    <link href="/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    {% include "navbar.html" %}
+
+    <div class="container">
+      {% if pagename -%}
+        <h1>{{pagename}}</h1>
+      {%- endif %}
+      {% block body %}{% endblock %}
+    </div>
+    
+    {% include "footer.html" %}
+    <script>
+    (function() {
+      var heroVids = document.querySelectorAll('.hero-bg video');
+      function resizeHeroVids() {
+        for(let i = 0, vid; vid = heroVids[i]; i++) {
+          if(vid.readyState != 4) {
+            vid.addEventListener('loadeddata', function() {
+             resizeHeroVids();
+            }, {once: true});
+          } else {
+            let parent = vid.parentNode,
+            vw = vid.videoWidth,
+            vh = vid.videoHeight,
+            vr = vh / vw,
+            pw = parent.offsetWidth,
+            ph = parent.offsetHeight,
+            pr = ph / pw;
+            if(pr > vr) {
+              vid.style.width = 'unset';
+              vid.style.height = `${ph}px`;
+            } else {
+              vid.style.width = `${pw}px`;
+              vid.style.height = 'unset';
+            }
+          }
+        }
+      }
+      resizeHeroVids();
+      window.addEventListener('resize', resizeHeroVids);
+    })()
+    </script>
+  </body>
+</html>

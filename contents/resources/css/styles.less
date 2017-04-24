@@ -1,0 +1,235 @@
+@dark: #181c26;
+@med: #606b84;
+@meda: fade(@med, 50%);
+@light: #ccc;
+@width: 800px;
+@nav-height: 80px;
+@display-font: 'Amatic SC', sans-serif;
+@bg-img: url(/resources/img/footer_lodyas.png);
+@shadow: 0 0 10px rgba(0,0,0,.25);
+@hoverscale: scale(1.05);;
+
+/************** START WITH THE BIG STUFF ***************/
+body {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: lighter;
+  font-size: 10pt;
+  background-color: @dark;
+  background-image: @bg-img;
+  color: @light;
+  padding: 0;
+  margin: 0;
+  padding-top:  @nav-height + 10px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.container {
+  width: @width;
+  margin: 0 auto;
+}
+
+/************** NAV ***************/
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: @nav-height;
+  background-color: @meda;
+  padding: 3px 10px;
+  box-sizing: border-box;
+  box-shadow: @shadow;
+  
+  a {
+    color: @light;
+    text-decoration: none;
+  }
+  &:hover .wordmark-name {
+    transform: @hoverscale;
+  }
+}
+
+.wordmark {
+  font-family: @display-font;
+  font-size: 40pt;
+  font-weight: bold;
+}
+.wordmark-name {
+  transition: .4s;
+  display: inline-block;
+}
+
+/* based on https://davidwalsh.name/css-flip */
+#tagline {
+  color: @dark;
+  font-weight: lighter;
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  perspective: 800px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	position: relative;
+  height: 1ex;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 10px;
+  &.flip {
+    transform: rotateX(180deg);
+  }
+}
+
+.front, .back {
+  white-space: nowrap;
+  height: 1ex;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateX(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateX(180deg);
+}
+
+/************** FOOTER ***************/
+.footer {
+  background-color: @meda;
+  padding: 5px 0;
+  margin-top: 10px;
+  color: @dark;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: @shadow;
+}
+
+.contact-links {
+  //text-align: center;
+  font-size: 40px;
+  a {
+    color: @dark;
+    transition: .4s;
+    display: inline-block;
+    &:hover {
+      color: lighten(@dark, 10%);
+      transform: scale(1.1);
+    }
+  }
+}
+
+/************** HERO ***************/
+.hero-mom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.hero {
+  flex-grow: 1;
+  text-align: center;
+  min-width: 395px;
+  max-width: 395px;
+  height: 300px;
+  margin: 5px;
+  transition: transform .4s;
+  position: relative;
+  box-shadow: @shadow;
+  &:hover {
+    z-index: 1;
+    transform: @hoverscale;
+    .hero-bg {
+      filter: brightness(.8);
+    }
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: filter .4s;
+    background: @med;
+    filter: brightness(0.6);
+    overflow: hidden;
+    width: 100%;
+    z-index: -1;
+  }
+  .hero-content {
+    display: inline-block;
+    color: @light;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25pt;
+    font-family: @display-font;
+    position: absolute;
+    text-shadow: 1px 1px 2px #333;
+    left: 0;
+    top: ~"calc( 50% - 1ex )";
+  }
+}
+
+/************** CONTENT ***************/
+h1 {
+  font-family: @display-font;
+  font-size: 35pt;
+  margin: 10px 0;
+}
+
+p {
+  text-align: justify;
+  margin: 5px 0;
+}
+
+p a {
+  color: @light;
+  cursor: pointer;
+}
+
+/************** MOBILE ***************/
+@media (max-width: @width) {
+  body {
+    padding-top: 115px;
+  }
+  #navbar {
+    height: 110px;
+    text-align: center;
+  }
+  #tagline {
+    display: block;
+    font-size: 18pt;
+    width: 100%;
+  }
+  .flipper {
+    left: -90px;
+  }
+  .container {
+    width: unset;
+    padding: 0 10px;
+  }
+  .hero-mom {
+    flex-direction: column;
+  }
+  .hero {
+    min-width: unset;
+    max-width: unset;
+  }
+  .contact-links {
+    font-size: 20px;
+  }
+}

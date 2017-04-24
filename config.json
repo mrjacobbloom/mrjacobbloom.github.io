@@ -1,0 +1,16 @@
+{
+  "locals": {
+    "name": "Jacob Bloom",
+    "url": "http://awesomeapp.com/",
+    "description": "Forget about drag'n'drop, I'm where it's at!",
+    "keywords": "awesome, fast, snappy, instant, horse, pony, unicorn"
+  },
+  "nunjucks": {
+    "autoescape": false
+  },
+  "plugins": [
+    "wintersmith-browserify",
+    "wintersmith-less",
+    "wintersmith-nunjucks"
+  ]
+}
