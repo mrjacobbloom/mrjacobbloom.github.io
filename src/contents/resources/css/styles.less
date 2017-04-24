@@ -1,7 +1,7 @@
 @dark: #181c26;
 @med: #606b84;
 @meda: fade(@med, 50%);
-@light: #ccc;
+@light: #eee;
 @width: 800px;
 @nav-height: 80px;
 @display-font: 'Amatic SC', sans-serif;
@@ -87,6 +87,7 @@ body {
 .front, .back {
   white-space: nowrap;
   height: 1ex;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   left: 0;
@@ -152,7 +153,7 @@ body {
     z-index: 1;
     transform: @hoverscale;
     .hero-bg {
-      filter: brightness(.8);
+      filter: brightness(1);
     }
   }
   .hero-bg {
@@ -163,7 +164,7 @@ body {
     left: 0;
     transition: filter .4s;
     background: @med;
-    filter: brightness(0.6);
+    filter: brightness(0.8);
     overflow: hidden;
     width: 100%;
     z-index: -1;
@@ -247,6 +248,12 @@ p a {
   .hero {
     min-width: unset;
     max-width: unset;
+    &:hover {
+      transform: none;
+      .hero-bg {
+        filter: brightness(.8);
+      }
+    }
   }
   .contact-links {
     font-size: 20px;

@@ -4,7 +4,7 @@ body {
   font-weight: lighter;
   font-size: 10pt;
   background-color: #181c26;
-  color: #ccc;
+  color: #eee;
   padding: 0;
   margin: 0;
   padding-top: 90px;
@@ -30,7 +30,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 #navbar a {
-  color: #ccc;
+  color: #eee;
   text-decoration: none;
 }
 #navbar:hover .wordmark-name {
@@ -71,6 +71,7 @@ body {
 .back {
   white-space: nowrap;
   height: 1ex;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   left: 0;
@@ -132,7 +133,7 @@ body {
   transform: scale(1.05);
 }
 .hero:hover .hero-bg {
-  filter: brightness(0.8);
+  filter: brightness(1);
 }
 .hero .hero-bg {
   position: absolute;
@@ -142,14 +143,14 @@ body {
   left: 0;
   transition: filter .4s;
   background: #606b84;
-  filter: brightness(0.6);
+  filter: brightness(0.8);
   overflow: hidden;
   width: 100%;
   z-index: -1;
 }
 .hero .hero-content {
   display: inline-block;
-  color: #ccc;
+  color: #eee;
   width: 100%;
   text-align: center;
   text-decoration: none;
@@ -177,15 +178,15 @@ p {
   margin: 5px 0;
 }
 p a {
-  color: #ccc;
+  color: #eee;
   cursor: pointer;
 }
 .content-contact-links a {
-  color: #ccc;
+  color: #eee;
   text-decoration: none;
 }
 .content-contact-links a:hover {
-  color: #ccc;
+  color: #eee;
 }
 .content-contact-links a span {
   font-family: 'Amatic SC', sans-serif;
@@ -217,6 +218,12 @@ p a {
   .hero {
     min-width: unset;
     max-width: unset;
+  }
+  .hero:hover {
+    transform: none;
+  }
+  .hero:hover .hero-bg {
+    filter: brightness(0.8);
   }
   .contact-links {
     font-size: 20px;
