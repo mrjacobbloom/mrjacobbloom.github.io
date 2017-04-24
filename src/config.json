@@ -1,9 +1,9 @@
 {
   "locals": {
     "name": "Jacob Bloom",
-    "url": "http://awesomeapp.com/",
-    "description": "Forget about drag'n'drop, I'm where it's at!",
-    "keywords": "awesome, fast, snappy, instant, horse, pony, unicorn"
+    "url": "/Users/jacob/git/mrjacobbloom.github.io/",
+    "description": "Hey, I'm Jacob! I like to do JavaScript things but if you pay me I can do other things. If the dress was blue for you swipe left.",
+    "keywords": "cu, boulder, programmer, piano, musician, web, design, dev, development"
   },
   "nunjucks": {
     "autoescape": false

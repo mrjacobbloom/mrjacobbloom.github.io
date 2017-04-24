@@ -5,7 +5,6 @@
 @width: 800px;
 @nav-height: 80px;
 @display-font: 'Amatic SC', sans-serif;
-@bg-img: url(/resources/img/footer_lodyas.png);
 @shadow: 0 0 10px rgba(0,0,0,.25);
 @hoverscale: scale(1.05);;
 
@@ -15,7 +14,6 @@ body {
   font-weight: lighter;
   font-size: 10pt;
   background-color: @dark;
-  background-image: @bg-img;
   color: @light;
   padding: 0;
   margin: 0;
@@ -77,7 +75,7 @@ body {
 	transition: transform 1s;
 	transform-style: preserve-3d;
 	position: relative;
-  height: 1ex;
+  height: 2ex;
   display: inline-block;
   vertical-align: text-top;
   width: 10px;
@@ -91,7 +89,6 @@ body {
   height: 1ex;
   backface-visibility: hidden;
   position: absolute;
-  top: 0;
   left: 0;
 }
 
@@ -99,11 +96,13 @@ body {
 .front {
 	z-index: 2;
 	transform: rotateX(0deg);
+  top: 0;
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateX(180deg);
+  bottom: 0;
 }
 
 /************** FOOTER ***************/

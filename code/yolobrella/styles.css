@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px #bbb;
+    color: #ddd;
+    font-weight: lighter;
+    background: #9bd;
+}
+img, #pattern {
+    display: none;
+}
+#canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.fa-wobble {
+-webkit-animation: wobble 2s infinite linear;
+-moz-animation: wobble 2s infinite linear;
+animation: wobble 2s infinite linear;
+}
+@-webkit-keyframes wobble{
+    0% {-webkit-transform: rotate(0deg);}
+    50% {-webkit-transform: rotate(0deg);}
+    62.5%{-webkit-transform: rotate(-8deg);}
+    75%{-webkit-transform: rotate(8deg);}
+    87.5%{-webkit-transform: rotate(-8deg);}
+    100%{-webkit-transform: rotate(0deg);}
+}
+@-moz-keyframes wobble{
+    0% {-moz-transform: rotate(0deg);}
+    50% {-moz-transform: rotate(0deg);}
+    62.5%{-moz-transform: rotate(-8deg);}
+    75%{-moz-transform: rotate(8deg);}
+    87.5%{-moz-transform: rotate(-8deg);}
+    100%{-moz-transform: rotate(0deg);}
+}
+@keyframes wobble{
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(0deg);}
+    62.5%{transform: rotate(-8deg);}
+    75%{transform: rotate(8deg);}
+    87.5%{transform: rotate(-8deg);}
+    100%{transform: rotate(0deg);}
+}
+
+#instructioncontainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#floatright {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    display: inline-block;
+}
+
+#timer {
+    display:inline-block;
+    margin-right: 10px;
+    line-height: 0;
+}
+
+#fblogin {
+    display: inline-block;
+}
+
+#fblogin .button {
+    margin-top: 5px;
+}
+
+#fblogin img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    border-radius: 40px;
+    margin-right:10px;
+}
+
+.button {
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: #555;
+    text-shadow: none;
+    font-size: 12pt;
+    box-shadow: 0 0 0 0 white;
+    transition: .2s all linear;
+}
+.button:hover {
+    box-shadow: 0 0 0 3px white;
+}
+
+#fail {
+    position: absolute;
+    padding-top: 17%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, .5);
+    text-align: center;
+    cursor: default;
+    transition: all .8s;
+    opacity: 0;
+}
+#fail.show {
+    opacity: 1;
+}
+#fail #failstamp {
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 50pt;
+    border: 10px solid white;
+    padding: 8px 10px;
+    line-height: 50pt;
+    border-radius: 20px;
+    transition: all .4s .8s ease-in,
+        box-shadow 1s 1.2s ease-out;
+    box-shadow: 0 0 0 rgba(255,255,255,.6);
+    opacity: 0;
+    -webkit-transform: rotate(10deg) scale(2) 
+        translate(-50px, 0);
+    -moz-transform: rotate(10deg) scale(2) 
+        translate(-50px, 0);
+    transform: rotate(10deg) scale(2) 
+        translate(-50px, 0);
+}
+#fail.show #failstamp {
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    transform: rotate(20deg);
+    box-shadow: 0 0 200px transparent;
+    opacity: 1;
+}
+#failtimer {
+    display: inline-block;
+    margin-top: 70px;
+    font-size: 20pt;
+}
+.failbutton {
+    background: white;
+    display: inline-block;
+    padding: 25px 0;
+    border-radius: 13px;
+    color: #444;
+    text-shadow: none;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 0 0 0 white;
+    transition: .3s all linear;
+}
+.failbutton:hover {
+    box-shadow: 0 0 0 5px white;
+}
+
+#titlebar {
+    padding: 5px 25px;
+    background: rgba(0, 0, 0, .2);
+    cursor: default;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+h1 {
+    font-weight: lighter;
+}
+#instructions {
+    padding: 0 25px;
+    font-size: 12pt;
+    cursor: default;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 0px;
+    transition: all .4s;
+}
+#hoverthang:hover #instructions, .force #instructions {
+    padding-bottom: 25px;
+    max-height: 1000px;
+}
+.forcedone #instructions {
+    padding-bottom: 0 !important;
+    max-height: 0px !important;
+}
+#click2close {
+    display: block;
+    max-height: 0;
+    margin: 0;
+}
+#click2close .button {
+    display: none;
+    position: relative;
+    top: -5px;
+    transition: all .4s ease-in;
+}
+.force #click2close .button {
+    display: inline-block;
+    max-height: 100px;
+}
+.forcedone #click2close .button {
+    display: inline-block;
+    max-height: 0;
+    opacity: 0;
+}
+
+#updown > div {
+    text-align: center;
+    width: 80px;
+    min-height: 60px;
+    max-height: 60px;
+    line-height: 0;
+    box-sizing: border-box;
+    padding-top: 4px;
+    color: #888;
+    text-shadow: none;
+    background: rgba(250,250,250,.5);
+    border: 4px solid rgba(0,0,0,.3);
+}
+#updown > div.click,
+#updown > div:hover,
+#updown > div:active {
+    background: rgba(250,250,250,.7);
+}
+#up {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-width: 2px !important;
+}
+#down {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top: none !important;
+}
+
+#instructioncontainer h2 {
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+#instructioncontainer a {
+    color: #ddd;
+}
+
+body {
+    background-image: url(bg.png);
+}
