@@ -161,10 +161,16 @@ body {
   top: calc( 50% - 1ex );
 }
 /************** CONTENT ***************/
-h1 {
+h1,
+h2 {
   font-family: 'Amatic SC', sans-serif;
-  font-size: 35pt;
   margin: 10px 0;
+}
+h1 {
+  font-size: 35pt;
+}
+h2 {
+  font-size: 20pt;
 }
 p {
   text-align: justify;
@@ -173,6 +179,16 @@ p {
 p a {
   color: #ccc;
   cursor: pointer;
+}
+.content-contact-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+.content-contact-links a:hover {
+  color: #ccc;
+}
+.content-contact-links a span {
+  font-family: 'Amatic SC', sans-serif;
 }
 /************** MOBILE ***************/
 @media (max-width: 800px) {

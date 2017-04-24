@@ -184,10 +184,17 @@ body {
 }
 
 /************** CONTENT ***************/
-h1 {
+h1, h2 {
   font-family: @display-font;
-  font-size: 35pt;
   margin: 10px 0;
+}
+
+h1 {
+  font-size: 35pt;
+}
+
+h2 {
+  font-size: 20pt;
 }
 
 p {
@@ -198,6 +205,19 @@ p {
 p a {
   color: @light;
   cursor: pointer;
+}
+
+.content-contact-links {
+  a {
+    color: @light;
+    text-decoration: none;
+    &:hover {
+      color: @light;
+    }
+    span {
+      font-family: @display-font;
+    }
+  }
 }
 
 /************** MOBILE ***************/
