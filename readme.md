@@ -1,19 +1,5 @@
+This is my website. It runs on wintersmith and nunjucks, which compile it into a static site for github pages.
 
-# Webapp
+The background image is a modified version of a free image from subtlepatterns.com so I didn't feel obligated to credit them on the site itself but yeah
 
-Opinionated web application template for wintersmith.
-
-Run `npm install` to install the plugins and deps.
-
-## Uses
-
-  * Plugins
-    * [wintersmith-browserify](https://github.com/jnordberg/wintersmith-browserify)
-    * [wintersmith-nunjucks](https://github.com/jbuck/wintersmith-nunjucks)
-    * [wintersmith-less](https://github.com/jnordberg/wintersmith-less)
-  * Other
-    * [browsernizr](https://github.com/jnordberg/browsernizr)
-    * [es5-shim](https://github.com/kriskowal/es5-shim)
-    * [reset.css](http://meyerweb.com/eric/tools/css/reset)
-    * [elements.less](https://github.com/dmitryf/elements)
-    * [ready.js](https://github.com/ded/domready)
+I use at /least/ two copies of Font Awesome throughout this site. (but no copies of jQuery so at least I can brag about my ability to write vanilla JS)
