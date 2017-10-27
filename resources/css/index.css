@@ -1,0 +1,206 @@
+/************** NAVBAR / INTRO ANIMATION ***************/
+#navbar {
+  transition: transform 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: translateY(0);
+  z-index: 2;
+}
+body.animIn #navbar {
+  transform: translateY(calc( 50vh -  40px ));
+  animation: navbarSlideUp 2s 1 cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@keyframes navbarSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(calc( 50vh -  40px  + 100px ));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(calc( 50vh -  40px ));
+  }
+}
+body.animIn .content {
+  display: none;
+}
+body:not(.animIn) .content {
+  animation: contentFadeIn 2s 1 cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@keyframes contentFadeIn {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body::after {
+  background-color: #181c26;
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+body:not(.animIn)::after {
+  animation: backgroundFadeOut 2s 1 cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0;
+}
+@keyframes backgroundFadeOut {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/************** CONTENT ***************/
+.content {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/************** HERO ***************/
+.hero {
+  text-align: center;
+  transition: transform .4s;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.hero:hover {
+  z-index: 1;
+  transform: scale(1.05);
+}
+.hero:hover .hero-bg {
+  filter: brightness(1);
+}
+.hero .hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: filter .4s;
+  background: #606b84;
+  filter: brightness(0.8);
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+}
+.hero .hero-content {
+  display: inline-block;
+  color: #eee;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25pt;
+  font-family: 'Amatic SC', sans-serif;
+  position: absolute;
+  text-shadow: 1px 1px 2px #333;
+  left: 0;
+  top: calc( 50% - 1ex );
+}
+/************** MOBILE ***************/
+@media (max-width: 800px) {
+  .hero {
+    min-width: unset;
+    max-width: unset;
+  }
+  .hero:hover {
+    transform: none !important;
+  }
+  .hero:hover .hero-bg {
+    filter: brightness(0.8);
+  }
+}
+.hero-mom {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc( 100vh -  110px );
+  margin: 15px;
+  margin-bottom: 0;
+}
+.hero {
+  flex-grow: 1;
+  min-width: 40%;
+  max-width: 100%;
+  margin: 15px;
+}
+.hero:hover {
+  z-index: 1;
+  transform: scale(1.05);
+}
+/************** ABOUT ME STUFF ***************/
+.scroll-message {
+  text-align: center;
+  font-size: 18pt;
+  font-family: 'Amatic SC', sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: -15px;
+  color: #606b84;
+  height: 0;
+  z-index: 5;
+}
+h2 {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 23pt;
+  margin-top: 15px;
+}
+#about {
+  text-align: justify;
+}
+#about a {
+  color: white;
+}
+.contact-button-wrapper {
+  margin: 30px 0;
+  text-align: center;
+}
+.contact-button {
+  font-family: 'Amatic SC', sans-serif;
+  display: inline-block;
+  background-color: rgba(96, 107, 132, 0.5);
+  color: #eee;
+  font-size: 22pt;
+  padding: 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all .2s;
+}
+.contact-button:hover {
+  background-color: rgba(121, 132, 158, 0.5);
+  transform: scale(1.05);
+}
+.contact-button:active {
+  background-color: rgba(75, 83, 102, 0.5);
+}
+/************** MOBILE ***************/
+@media (max-width: 860px) {
+  body {
+    padding-top: 115px;
+  }
+  .container {
+    width: unset;
+    padding: 0 30px;
+  }
+}
+@media (max-width: 800px) {
+  .content {
+    top: 115px;
+  }
+  .hero-mom {
+    flex-direction: column;
+  }
+  .scroll-message {
+    display: none;
+  }
+}

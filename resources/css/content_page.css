@@ -1,0 +1,119 @@
+/************** START WITH THE BIG STUFF ***************/
+body {
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+/************** FOOTER ***************/
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/************** HERO ***************/
+.hero {
+  text-align: center;
+  transition: transform .4s;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.hero:hover {
+  z-index: 1;
+  transform: scale(1.05);
+}
+.hero:hover .hero-bg {
+  filter: brightness(1);
+}
+.hero .hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: filter .4s;
+  background: #606b84;
+  filter: brightness(0.8);
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+}
+.hero .hero-content {
+  display: inline-block;
+  color: #eee;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25pt;
+  font-family: 'Amatic SC', sans-serif;
+  position: absolute;
+  text-shadow: 1px 1px 2px #333;
+  left: 0;
+  top: calc( 50% - 1ex );
+}
+/************** MOBILE ***************/
+@media (max-width: 800px) {
+  .hero {
+    min-width: unset;
+    max-width: unset;
+  }
+  .hero:hover {
+    transform: none !important;
+  }
+  .hero:hover .hero-bg {
+    filter: brightness(0.8);
+  }
+}
+.hero-mom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.hero {
+  flex-grow: 1;
+  min-width: 395px;
+  max-width: 395px;
+  height: 300px;
+  margin: 5px;
+}
+/************** CONTENT ***************/
+h1,
+h2 {
+  font-family: 'Amatic SC', sans-serif;
+  margin: 10px 0;
+}
+h1 {
+  font-size: 35pt;
+}
+h2 {
+  font-size: 20pt;
+}
+p {
+  text-align: justify;
+  margin: 5px 0;
+}
+p a {
+  color: #eee;
+  cursor: pointer;
+}
+.content-contact-links a {
+  color: #eee;
+  text-decoration: none;
+}
+.content-contact-links a:hover {
+  color: #eee;
+}
+.content-contact-links a span {
+  font-family: 'Amatic SC', sans-serif;
+}
+/************** MOBILE ***************/
+@media (max-width: 800px) {
+  body {
+    padding-top: 115px;
+  }
+  .hero-mom {
+    flex-direction: column;
+  }
+  .contact-links {
+    font-size: 20px;
+  }
+}

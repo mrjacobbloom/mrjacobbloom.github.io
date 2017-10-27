@@ -1,0 +1,81 @@
+@import "consts";
+
+/************** START WITH THE BIG STUFF ***************/
+body {
+  padding-top:  @nav-height + 10px;
+  padding-bottom: 80px;
+}
+
+/************** FOOTER ***************/
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/************** HERO ***************/
+@import "hero";
+
+.hero-mom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.hero {
+  flex-grow: 1;
+  min-width: 395px;
+  max-width: 395px;
+  height: 300px;
+  margin: 5px;
+}
+
+/************** CONTENT ***************/
+h1, h2 {
+  font-family: @display-font;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 35pt;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+p {
+  text-align: justify;
+  margin: 5px 0;
+}
+
+p a {
+  color: @light;
+  cursor: pointer;
+}
+
+.content-contact-links {
+  a {
+    color: @light;
+    text-decoration: none;
+    &:hover {
+      color: @light;
+    }
+    span {
+      font-family: @display-font;
+    }
+  }
+}
+
+/************** MOBILE ***************/
+@media (max-width: @width) {
+  body {
+    padding-top: 115px;
+  }
+  .hero-mom {
+    flex-direction: column;
+  }
+  .contact-links {
+    font-size: 20px;
+  }
+}

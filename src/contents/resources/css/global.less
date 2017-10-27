@@ -1,0 +1,58 @@
+@import "consts";
+
+/************** START WITH THE BIG STUFF ***************/
+body {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: lighter;
+  font-size: 10pt;
+  background-color: @dark;
+  background-image: url(/resources/img/footer_lodyas.png);
+  color: @light;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.container {
+  width: @width;
+  margin: 0 auto;
+}
+
+/************** NAVBAR ***************/
+@import "navbar";
+
+/************** MOBILE ***************/
+@media (max-width: (@width + 20px)) {
+  body {
+    padding-top: @nav-height-mobile;
+  }
+  .container {
+    width: unset;
+    padding: 0 10px;
+  }
+}
+
+/************** FOOTER ***************/
+.footer {
+  background-color: @meda;
+  padding: 5px 0;
+  margin-top: 10px;
+  color: @dark;
+  box-shadow: @shadow;
+}
+
+.contact-links {
+  //text-align: center;
+  font-size: 40px;
+  a {
+    color: @dark;
+    transition: .4s;
+    display: inline-block;
+    &:hover {
+      color: lighten(@dark, 10%);
+      transform: scale(1.1);
+    }
+  }
+}

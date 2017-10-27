@@ -1,0 +1,19 @@
+{% extends 'skeleton.html' %}
+
+{% block skeleton_head %}
+  <link href="/resources/css/content_page.css" rel="stylesheet">
+{% endblock %}
+
+{% block skeleton_body %}
+
+{% include "navbar.html" %}
+
+<div class="container">
+  {% if pagename -%}
+    <h1>{{pagename}}</h1>
+  {%- endif %}
+  {% block body %}{% endblock %}
+</div>
+
+{% include "footer.html" %}
+{% endblock %}

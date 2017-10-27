@@ -1,0 +1,93 @@
+@import "consts";
+
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: @nav-height;
+  background-color: @meda;
+  padding: 3px 10px;
+  box-sizing: border-box;
+  box-shadow: @shadow;
+  
+  a {
+    color: @light;
+    text-decoration: none;
+  }
+  &:hover .wordmark-name {
+    transform: @hoverscale;
+  }
+}
+
+.wordmark {
+  font-family: @display-font;
+  font-size: 40pt;
+  font-weight: bold;
+}
+.wordmark-name {
+  transition: .4s;
+  display: inline-block;
+}
+
+/* based on https://davidwalsh.name/css-flip */
+#tagline {
+  color: @dark;
+  font-weight: lighter;
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  perspective: 800px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	position: relative;
+  height: 2ex;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 10px;
+  &.flip {
+    transform: rotateX(180deg);
+  }
+}
+
+.front, .back {
+  white-space: nowrap;
+  height: 1ex;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateX(0deg);
+  top: 0;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateX(180deg);
+  bottom: 0;
+}
+
+/************** MOBILE ***************/
+@media (max-width: @width) {
+  #navbar {
+    height: 110px;
+    text-align: center;
+  }
+  #tagline {
+    display: block;
+    font-size: 18pt;
+    width: 100%;
+  }
+  .flipper {
+    left: -90px;
+  }
+}

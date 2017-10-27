@@ -1,9 +1,8 @@
 {
   "locals": {
     "name": "Jacob Bloom",
-    "url": "/",
     "description": "Hey, I'm Jacob! I like to do JavaScript things but if you pay me I can do other things. If the dress was blue for you swipe left.",
-    "keywords": "cu, boulder, programmer, piano, musician, web, design, dev, development"
+    "keywords": "cu, boulder, university of colorado, colorado, javascript, programmer, developer, servicenow, piano, musician, web, design, dev, development"
   },
   "nunjucks": {
     "autoescape": false

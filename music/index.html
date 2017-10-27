@@ -7,9 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
     <meta name="description" content="Hey, I'm Jacob! I like to do JavaScript things but if you pay me I can do other things. If the dress was blue for you swipe left.">
-    <meta name="keywords" content="cu, boulder, programmer, piano, musician, web, design, dev, development">
+    <meta name="keywords" content="cu, boulder, university of colorado, colorado, programmer, piano, musician, web, design, dev, development">
     <meta property="og:title" content="Jacob Bloom">
-    <meta property="og:url" content="/">
     <meta property="og:description" content="Hey, I'm Jacob! I like to do JavaScript things but if you pay me I can do other things. If the dress was blue for you swipe left.">
     
     <link rel="icon" href="/favicon.ico">
@@ -20,18 +19,21 @@
     
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Merriweather" rel="stylesheet">
     <link href="/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/resources/css/styles.css" rel="stylesheet">
-    <style>
-      body {
-        background-image: url(/resources/img/footer_lodyas.png);
-      }
-    </style>
+    <link href="/resources/css/global.css" rel="stylesheet">
+    
+    <script src="/resources/js/resizeHeroVids.js"></script>
+    
+    
+  <link href="/resources/css/content_page.css" rel="stylesheet">
+
   </head>
 
-  <body>
-    <div id="navbar">
+  <body class="">
+    
+
+<div id="navbar">
   <div class="container">
-    <a href="/" class="wordmark">
+    <a href="/#noAnimate" class="wordmark">
       <span class="wordmark-name">Jacob Bloom</span>
       <div id="tagline">
         <div class="flipper">
@@ -42,48 +44,20 @@
     </a>
   </div>
 </div>
-<script>
-var flipper = document.querySelector('.flipper');
-var taglines = [
-  'is really great and smart',
-  'knows pi to 6 decimal places',
-  'codes like a pro',
-  'has cool hair',
-  'is a great speler',
-  'has a voice like an angel',
-  'smells nice (usually)',
-  'should be hired by you',
-  'has been outside',
-  'does awesome music things',
-  'looks good in clothing',
-  'doesn\'t like his own posts',
-  'knows the ABC\'s backwards',
-  'never lies (not counting this)'
-], i = Math.floor(Math.random() * taglines.length);
-flipper.querySelector('.front').textContent = taglines[i];
-setInterval(e => {
-  i++;
-  let tagline = taglines[i % taglines.length];
-  if(flipper.classList.toggle('flip')) {
-    flipper.querySelector('.back').textContent = tagline;
-  } else {
-    flipper.querySelector('.front').textContent = tagline;
-  }
-}, 4000);
-</script>
+<script src="/resources/js/navbar.js""></script>
 
 
-    <div class="container">
-      <h1>Music</h1>
-      
+<div class="container">
+  <h1>Music</h1>
+  
 <p>
 Check me out on SoundCloud:
 </p>
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/64389215&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_reposts=false"></iframe>
 
-    </div>
-    
-    <div class="footer">
+</div>
+
+<div class="footer">
   <div class="container">
     <div class="contact-links">
       <a href="mailto:mr.jacob.bloom@gmail.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
@@ -100,36 +74,6 @@ Check me out on SoundCloud:
   </div>
 </div>
 
-    <script>
-    (function() {
-      var heroVids = document.querySelectorAll('.hero-bg video');
-      function resizeHeroVids() {
-        for(let i = 0, vid; vid = heroVids[i]; i++) {
-          if(vid.readyState != 4) {
-            vid.addEventListener('loadeddata', function() {
-             resizeHeroVids();
-            }, {once: true});
-          } else {
-            let parent = vid.parentNode,
-            vw = vid.videoWidth,
-            vh = vid.videoHeight,
-            vr = vh / vw,
-            pw = parent.offsetWidth,
-            ph = parent.offsetHeight,
-            pr = ph / pw;
-            if(pr > vr) {
-              vid.style.width = 'unset';
-              vid.style.height = `${ph}px`;
-            } else {
-              vid.style.width = `${pw}px`;
-              vid.style.height = 'unset';
-            }
-          }
-        }
-      }
-      resizeHeroVids();
-      window.addEventListener('resize', resizeHeroVids);
-    })()
-    </script>
+
   </body>
 </html>
