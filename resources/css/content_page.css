@@ -87,6 +87,11 @@ h1 {
 h2 {
   font-size: 20pt;
 }
+h2::before {
+  content: "";
+  display: block;
+  clear: both;
+}
 p {
   text-align: justify;
   margin: 5px 0;
@@ -94,6 +99,14 @@ p {
 p a {
   color: #eee;
   cursor: pointer;
+}
+.right {
+  float: right;
+  margin: 0 0 5px 10px;
+}
+.left {
+  float: left;
+  margin: 0 10px 5px 0;
 }
 .content-contact-links a {
   color: #eee;

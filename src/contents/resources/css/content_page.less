@@ -42,16 +42,29 @@ h1 {
 
 h2 {
   font-size: 20pt;
+  &::before {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 p {
   text-align: justify;
   margin: 5px 0;
+  & a {
+    color: @light;
+    cursor: pointer;
+  }
 }
 
-p a {
-  color: @light;
-  cursor: pointer;
+.right {
+  float: right;
+  margin: 0 0 5px 10px;
+}
+.left {
+  float: left;
+  margin: 0 10px 5px 0;
 }
 
 .content-contact-links {

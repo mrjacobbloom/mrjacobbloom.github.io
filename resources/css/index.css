@@ -146,7 +146,7 @@ body:not(.animIn)::after {
   font-weight: bold;
   position: relative;
   top: -15px;
-  color: #606b84;
+  color: #eee;
   height: 0;
   z-index: 5;
 }
