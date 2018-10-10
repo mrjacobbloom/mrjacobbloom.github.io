@@ -31,11 +31,11 @@
   <body class="">
     
 
-<div id="navbar" class="triangle">
+<div id="navbar" class="triangle" role="navigation">
   <div class="container">
     <a href="/#noAnimate" class="wordmark">
-      <span class="wordmark-name">Jacob Bloom</span>
-      <div id="tagline">
+      <span class="wordmark-name" aria-label="Home">Jacob Bloom</span>
+      <div id="tagline" aria-hidden="true">
         <div class="flipper">
       		<div class="front"></div>
       		<div class="back"></div>
@@ -47,9 +47,9 @@
 <script src="/resources/js/navbar.js""></script>
 
 
-<div class="container">
+<div class="container" role="main">
   <h1>Code</h1>
-  
+    
 <p>
   I’m a fun, energetic, resourceful programmer with a passion for JavaScript. I
   have egregious levels of experience in both client- and server-side JS. I have
@@ -65,43 +65,43 @@
   <a href="https://jsfiddle.net/user/mrjacobbloom/"><i class="fa fa-jsfiddle" aria-hidden="true"></i> <span>JSFiddle</span></a>
 </div>
 </p>
-<h2>JS Examples</h2>
+<h2>Projects</h2>
 <p>
 Here are a few of my favorite projects that I've either done on my own or been a part of:
 </p>
 <div class="hero-mom">
   <a href="https://github.com/mrjacobbloom/teamWORK" class="hero" target="_blank">
-    <div class="hero-bg">
+    <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/natural-neighbors.mp4"></video>
     </div>
     <div class="hero-content">Natural Neighbors</div>
   </a>
   <a href="https://github.com/mrjacobbloom/fruit" class="hero" target="_blank">
-    <div class="hero-bg">
+    <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/fruit.mp4"></video>
     </div>
     <div class="hero-content">Fruit</div>
   </a>
   <a href="https://notochord.github.io/notochord/demo/" class="hero" target="_blank">
-    <div class="hero-bg">
+    <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/notochord.mp4"></video>
     </div>
     <div class="hero-content">Notochord</div>
   </a>
   <a href="https://github.com/ElementalCode/elemental" class="hero" target="_blank">
-    <div class="hero-bg">
+    <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/elemental.mp4"></video>
     </div>
     <div class="hero-content">Elemental</div>
   </a>
   <a href="https://mrjacobbloom.github.io/editor/" class="hero" target="_blank">
-    <div class="hero-bg">
+    <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/editor.mp4"></video>
     </div>
     <div class="hero-content">Editor</div>
   </a>
   <a href="/code/yolobrella/" class="hero" target="_blank">
-    <div class="hero-bg">
+    <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/yolobrella.mp4"></video>
     </div>
     <div class="hero-content">Yolobrella</div>
@@ -110,23 +110,21 @@ Here are a few of my favorite projects that I've either done on my own or been a
 
 </div>
 
-<div class="footer triangle">
+<footer class="footer triangle">
   <div class="container">
     <div class="contact-links">
-      <a href="mailto:mr.jacob.bloom@gmail.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
-      <a href="https://www.facebook.com/MrJacobBloom"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-      <a href="https://twitter.com/mrjacobbloom"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+      <a href="mailto:mr.jacob.bloom@gmail.com" aria-label="Email"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
       |
-      <a href="https://github.com/mrjacobbloom"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-      <a href="https://jsfiddle.net/user/mrjacobbloom/"><i class="fa fa-jsfiddle" aria-hidden="true"></i></a>
+      <a href="https://github.com/mrjacobbloom" aria-label="Github"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+      <a href="https://jsfiddle.net/user/mrjacobbloom/" aria-label="JSFiddle"><i class="fa fa-jsfiddle" aria-hidden="true"></i></a>
       |
-      <a href="https://www.youtube.com/user/jswingcovers"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-      <a href="https://soundcloud.com/mrjacobbloom"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+      <a href="https://www.youtube.com/user/jswingcovers" aria-label="Youtube"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+      <a href="https://soundcloud.com/mrjacobbloom" aria-label="SoundCloud"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
       |
     </div>
     &copy; <span id="year"><script>document.querySelector('#year').textContent = (new Date()).getFullYear();</script></span> Jacob Bloom
   </div>
-</div>
+</footer>
 
 
   </body>

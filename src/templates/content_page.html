@@ -8,11 +8,11 @@
 
 {% include "navbar.html" %}
 
-<div class="container">
+<div class="container" role="main">
   {% if pagename -%}
     <h1>{{pagename}}</h1>
   {%- endif %}
-  {% block body %}{% endblock %}
+    {% block body %}{% endblock %}
 </div>
 
 {% include "footer.html" %}

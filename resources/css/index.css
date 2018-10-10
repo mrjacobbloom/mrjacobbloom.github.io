@@ -9,11 +9,16 @@ body.animIn #navbar {
   animation: navbarSlideUp 2s 1 cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 @keyframes navbarSlideUp {
-  from {
+  0% {
+    pointer-events: none;
     opacity: 0;
     transform: translateY(calc( 50vh -  40px  + 100px ));
   }
-  to {
+  99% {
+    pointer-events: none;
+  }
+  100% {
+    pointer-events: auto;
     opacity: 1;
     transform: translateY(calc( 50vh -  40px ));
   }
@@ -21,7 +26,7 @@ body.animIn #navbar {
 body.animIn .content {
   display: none;
 }
-body:not(.animIn) .content {
+body:not(.animIn):not(.cancelAnimIn) .content {
   animation: contentFadeIn 2s 1 cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 @keyframes contentFadeIn {
@@ -35,29 +40,33 @@ body:not(.animIn) .content {
     opacity: 1;
   }
 }
-body::after {
+#animIn-overlay {
+  z-index: 1;
   background-color: #fafafa;
-  z-index: -10;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  content: "";
 }
-body:not(.animIn)::after {
+body:not(.animIn) #animIn-overlay {
   animation: backgroundFadeOut 2s 1 cubic-bezier(0.645, 0.045, 0.355, 1);
   opacity: 0;
 }
 @keyframes backgroundFadeOut {
   0% {
     opacity: 1;
+    display: block;
   }
   33% {
     opacity: 1;
   }
+  99% {
+    opacity: 0;
+  }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 /************** CONTENT ***************/
