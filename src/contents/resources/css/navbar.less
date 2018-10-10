@@ -6,11 +6,11 @@
   left: 0;
   right: 0;
   height: @nav-height;
-  background-color: @meda;
-  padding: 3px 10px;
+  padding: 13px 10px;
   box-sizing: border-box;
   box-shadow: @shadow;
-  
+  font-size: 33pt;
+
   a {
     color: @light;
     text-decoration: none;
@@ -20,10 +20,18 @@
   }
 }
 
+#navbar-bg {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .wordmark {
   font-family: @display-font;
-  font-size: 40pt;
-  font-weight: bold;
+  font-weight: 300;
 }
 .wordmark-name {
   transition: .4s;
@@ -32,8 +40,9 @@
 
 /* based on https://davidwalsh.name/css-flip */
 #tagline {
-  color: @dark;
-  font-weight: lighter;
+  color: @light;
+  font-weight: 100;
+  //font-style: normal;
   display: inline-block;
   position: relative;
   width: 10px;
@@ -88,6 +97,11 @@
     width: 100%;
   }
   .flipper {
-    left: -90px;
+    //left: -90px;
+    width: 100%;
+    div {
+      width: 100%;
+      text-align: center;
+    }
   }
 }

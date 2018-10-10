@@ -16,13 +16,14 @@ body {
   transition: transform .4s;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background: #1f6268;
 }
 .hero:hover {
-  z-index: 1;
+  z-index: 3;
   transform: scale(1.05);
 }
 .hero:hover .hero-bg {
-  filter: brightness(1);
+  opacity: 0.8;
 }
 .hero .hero-bg {
   position: absolute;
@@ -30,24 +31,25 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  transition: filter .4s;
-  background: #606b84;
-  filter: brightness(0.8);
+  transition: opacity .4s;
+  background: #1f6268;
+  opacity: 0.4;
   overflow: hidden;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
 }
 .hero .hero-content {
   display: inline-block;
-  color: #eee;
+  color: white;
   width: 100%;
   text-align: center;
   text-decoration: none;
   font-size: 25pt;
-  font-family: 'Amatic SC', sans-serif;
+  font-family: 'Roboto', sans-serif;
   position: absolute;
   text-shadow: 1px 1px 2px #333;
   left: 0;
+  z-index: 2;
   top: calc( 50% - 1ex );
 }
 /************** MOBILE ***************/
@@ -78,8 +80,9 @@ body {
 /************** CONTENT ***************/
 h1,
 h2 {
-  font-family: 'Amatic SC', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 10px 0;
+  font-weight: 300;
 }
 h1 {
   font-size: 35pt;
@@ -97,7 +100,7 @@ p {
   margin: 5px 0;
 }
 p a {
-  color: #eee;
+  color: #1f6268;
   cursor: pointer;
 }
 .right {
@@ -108,15 +111,19 @@ p a {
   float: left;
   margin: 0 10px 5px 0;
 }
+.content-contact-links {
+  display: block;
+  margin: 15px 0;
+}
 .content-contact-links a {
-  color: #eee;
+  color: #1f6268;
   text-decoration: none;
 }
 .content-contact-links a:hover {
-  color: #eee;
+  color: #1f6268;
 }
 .content-contact-links a span {
-  font-family: 'Amatic SC', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 /************** MOBILE ***************/
 @media (max-width: 800px) {

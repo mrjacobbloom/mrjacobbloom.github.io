@@ -1,11 +1,10 @@
 /************** START WITH THE BIG STUFF ***************/
 body {
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Sanchez', sans-serif;
   font-weight: lighter;
-  font-size: 10pt;
-  background-color: #181c26;
-  background-image: url(/resources/img/footer_lodyas.png);
-  color: #eee;
+  font-size: 12pt;
+  background-color: #fafafa;
+  color: #1f6268;
   padding: 0;
   margin: 0;
   min-height: 100vh;
@@ -21,6 +20,12 @@ body {
   display: block;
   clear: both;
 }
+/************** TRIANGLE BG ***************/
+.triangle {
+  background-color: #1f6268;
+  background-image: url(/resources/img/trianglify-extrawide.svg);
+  background-size: cover;
+}
 /************** NAVBAR ***************/
 #navbar {
   position: absolute;
@@ -28,22 +33,29 @@ body {
   left: 0;
   right: 0;
   height: 80px;
-  background-color: rgba(96, 107, 132, 0.5);
-  padding: 3px 10px;
+  padding: 13px 10px;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  font-size: 33pt;
 }
 #navbar a {
-  color: #eee;
+  color: white;
   text-decoration: none;
 }
 #navbar:hover .wordmark-name {
   transform: scale(1.05);
 }
+#navbar-bg {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .wordmark {
-  font-family: 'Amatic SC', sans-serif;
-  font-size: 40pt;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 .wordmark-name {
   transition: .4s;
@@ -51,8 +63,8 @@ body {
 }
 /* based on https://davidwalsh.name/css-flip */
 #tagline {
-  color: #181c26;
-  font-weight: lighter;
+  color: white;
+  font-weight: 100;
   display: inline-block;
   position: relative;
   width: 10px;
@@ -103,7 +115,11 @@ body {
     width: 100%;
   }
   .flipper {
-    left: -90px;
+    width: 100%;
+  }
+  .flipper div {
+    width: 100%;
+    text-align: center;
   }
 }
 /************** MOBILE ***************/
@@ -118,21 +134,21 @@ body {
 }
 /************** FOOTER ***************/
 .footer {
-  background-color: rgba(96, 107, 132, 0.5);
   padding: 5px 0;
   margin-top: 10px;
-  color: #181c26;
+  color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 .contact-links {
+  display: inline-block;
   font-size: 40px;
+  margin-top: 4px;
 }
 .contact-links a {
-  color: #181c26;
+  color: white;
   transition: .4s;
   display: inline-block;
 }
 .contact-links a:hover {
-  color: #2c3345;
   transform: scale(1.1);
 }

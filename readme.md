@@ -8,6 +8,8 @@ wintersmith build -o /Users/.../mrjacobbloom.github.io
 ```
 
 ## credits
-The background image is a modified version of a free image from subtlepatterns.com so I didn't feel obligated to credit them on the site itself but yeah
-
-I use at /least/ two copies of Font Awesome throughout this site. (but no copies of jQuery so at least I can brag about my ability to write vanilla JS)
+- The background image is from https://trianglify.io/
+- I used MuseScore for the sheet music graphics
+- I use a lot of Google Fonts. Thanx Google :raised-hands:
+- I use Font Awesome throughout this site. (but no jQuery so at least I can brag
+  about my ability to write vanilla JS)

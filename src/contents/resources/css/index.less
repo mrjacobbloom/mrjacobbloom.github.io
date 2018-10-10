@@ -43,7 +43,7 @@ body:not(.animIn) .content {
 }
 
 body::after {
-  background-color: @dark;
+  background-color: @bg-grey;
   z-index: -10;
   position: fixed;
   top: 0;
@@ -104,16 +104,17 @@ body:not(.animIn)::after {
   text-align: center;
   font-size: 18pt;
   font-family: @display-font;
-  font-weight: bold;
+  font-weight: 300;
   position: relative;
   top: -15px;
-  color: @light;
+  color: @dark;
   height: 0;
   z-index: 5;
 }
 
 h2 {
   font-family: @display-font;
+  font-weight: 200;
   font-size: 23pt;
   margin-top: 15px;
 }
@@ -122,8 +123,8 @@ h2 {
   text-align: justify;
 }
 
-#about a {
-  color: white;
+#about p a {
+  color: @dark;
 }
 .contact-button-wrapper {
   margin: 30px 0;
@@ -132,19 +133,22 @@ h2 {
 .contact-button {
   font-family: @display-font;
   display: inline-block;
-  background-color: @meda;
+  background-color: @dark;
   color: @light;
   font-size: 22pt;
   padding: 20px;
   border-radius: 4px;
   text-decoration: none;
   transition: all .2s;
+  strong {
+    font-weight: 300;
+  }
   &:hover {
-    background-color: lighten(@meda, 10%);
+    background-color: lighten(@dark, 10%);
     transform: scale(1.05);
   }
   &:active {
-    background-color: darken(@meda, 10%);
+    background-color: darken(@light, 10%);
   }
 }
 

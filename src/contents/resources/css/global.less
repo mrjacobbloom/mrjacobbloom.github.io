@@ -2,12 +2,12 @@
 
 /************** START WITH THE BIG STUFF ***************/
 body {
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Sanchez', sans-serif;
   font-weight: lighter;
-  font-size: 10pt;
-  background-color: @dark;
-  background-image: url(/resources/img/footer_lodyas.png);
-  color: @light;
+  font-size: 12pt;
+  background-color: @bg-grey;
+  //background-image: url(/resources/img/footer_lodyas.png);
+  color: @dark;
   padding: 0;
   margin: 0;
   min-height: 100vh;
@@ -23,6 +23,13 @@ body {
     display: block;
     clear: both;
   }
+}
+
+/************** TRIANGLE BG ***************/
+.triangle {
+  background-color: @dark;
+  background-image: url(/resources/img/trianglify-extrawide.svg);
+  background-size: cover;
 }
 
 /************** NAVBAR ***************/
@@ -41,22 +48,23 @@ body {
 
 /************** FOOTER ***************/
 .footer {
-  background-color: @meda;
   padding: 5px 0;
   margin-top: 10px;
-  color: @dark;
+  color: @light;
   box-shadow: @shadow;
 }
 
 .contact-links {
   //text-align: center;
+  display: inline-block;
   font-size: 40px;
+  margin-top: 4px;
   a {
-    color: @dark;
+    color: @light;
     transition: .4s;
     display: inline-block;
     &:hover {
-      color: lighten(@dark, 10%);
+      //color: lighten(@dark, 10%);
       transform: scale(1.1);
     }
   }

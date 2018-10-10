@@ -34,6 +34,7 @@ body {
 h1, h2 {
   font-family: @display-font;
   margin: 10px 0;
+  font-weight: 300;
 }
 
 h1 {
@@ -53,7 +54,7 @@ p {
   text-align: justify;
   margin: 5px 0;
   & a {
-    color: @light;
+    color: @dark;
     cursor: pointer;
   }
 }
@@ -68,11 +69,13 @@ p {
 }
 
 .content-contact-links {
+  display: block;
+  margin: 15px 0;
   a {
-    color: @light;
+    color: @dark;
     text-decoration: none;
     &:hover {
-      color: @light;
+      color: @dark;
     }
     span {
       font-family: @display-font;
