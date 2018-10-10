@@ -48,6 +48,7 @@ body:not(.animIn):not(.cancelAnimIn) .content {
   right: 0;
   bottom: 0;
   left: 0;
+  display: none;
 }
 body:not(.animIn) #animIn-overlay {
   animation: backgroundFadeOut 2s 1 cubic-bezier(0.645, 0.045, 0.355, 1);
