@@ -9,23 +9,8 @@
 {% endblock %}
 
 {% block skeleton_body %}
-  <div id="animIn-overlay" aria-label="Skip intro"></div>
+  <a href="#" id="animIn-overlay" aria-label="Skip intro" title="Skip intro"></a>
   {% include "navbar.html" %}
-  <script>
-  if(location.hash.includes('noAnimate')) {
-    document.body.classList.remove('animIn');
-  } else {
-    document.querySelector('#animIn-overlay').addEventListener('click', () => {
-      document.body.classList.remove('animIn');
-      document.body.classList.add('cancelAnimIn');
-      resizeHeroVids();
-    });
-    setTimeout(() => {
-      document.body.classList.remove('animIn');
-      resizeHeroVids();
-    }, 3000);
-  }
-  </script>
   <div class="content">
     <div class="hero-mom">
       <a href="code/" class="hero">
@@ -41,7 +26,7 @@
         <div class="hero-content">I also do music if that's more your thing</div>
       </a>
     </div>
-    <div class="scroll-message">&mdash; or keep scrolling to learn more about me &mdash;</div>
+    <a class="scroll-message" href="#about">&mdash; or keep scrolling to learn more about me &mdash;</a>
     <div class="container" id="about" role="main">
       <h2>About Me</h2>
       <p>
@@ -71,6 +56,7 @@
         <a class="contact-button triangle" href="mailto:mr.jacob.bloom@gmail.com"><strong>heck</strong> yeah i'll contact you</a>
       </div>
     </div>
+    <script src="/resources/js/index.js"></script>
     {% include "footer.html" %}
   </div>
 {% endblock %}

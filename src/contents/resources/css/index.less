@@ -56,16 +56,17 @@ body:not(.animIn):not(.cancelAnimIn) .content {
   right: 0;
   bottom: 0;
   left: 0;
-  display: none;
 }
 body:not(.animIn) #animIn-overlay {
   animation: backgroundFadeOut 2s 1 @easeInOutCubic;
   opacity: 0;
+  display: none;
 }
 @keyframes backgroundFadeOut {
   0% {
     opacity: 1;
     display: block;
+    pointer-events: all;
   }
   
   33% {
@@ -79,6 +80,7 @@ body:not(.animIn) #animIn-overlay {
   100% {
     opacity: 0;
     display: none;
+    pointer-events: none;
   }
 }
 
@@ -113,6 +115,7 @@ body:not(.animIn) #animIn-overlay {
 
 /************** ABOUT ME STUFF ***************/
 .scroll-message {
+  display: block;
   text-align: center;
   font-size: 18pt;
   font-family: @display-font;
@@ -120,8 +123,13 @@ body:not(.animIn) #animIn-overlay {
   position: relative;
   top: -15px;
   color: @dark;
+  text-decoration: none;
   height: 0;
   z-index: 5;
+  transition: transform .4s;
+  &:hover {
+    transform: @hoverscale;
+  }
 }
 
 h2 {
