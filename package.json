@@ -1,10 +1,16 @@
 {
+  "scripts": {
+    "preview": "npx wintersmith preview -C src",
+    "build": "npx wintersmith build -C src -o .."
+  },
   "dependencies": {
+    "browsernizr": "*",
+    "natives": "^1.1.5",
+    "wintersmith": "*",
     "wintersmith-browserify": "*",
     "wintersmith-less": "*",
     "wintersmith-nunjucks": "*",
-    "wintersmith-livereload": "*",
-    "browsernizr": "*"
+    "wintersmith-livereload": "*"
   },
   "private": true
 }

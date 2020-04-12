@@ -1,7 +1,8 @@
 // handle the intro animaton
-if(location.hash.includes('noAnimate')) {
+if(sessionStorage.getItem('noAnimate')) {
   document.body.classList.remove('animIn');
 } else {
+  sessionStorage.setItem('noAnimate', true);
   console.log('aa')
   console.log(document.querySelector('#animIn-overlay'))
   document.querySelector('#animIn-overlay').addEventListener('click', () => {

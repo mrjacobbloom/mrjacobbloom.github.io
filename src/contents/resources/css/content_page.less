@@ -31,7 +31,7 @@ body {
 }
 
 /************** CONTENT ***************/
-h1, h2 {
+h1, h2, h3 {
   font-family: @display-font;
   margin: 10px 0;
   font-weight: 300;
@@ -48,6 +48,10 @@ h2 {
     display: block;
     clear: both;
   }
+}
+
+h3 {
+  font-size: 17pt;
 }
 
 p {
@@ -80,6 +84,45 @@ p {
     span {
       font-family: @display-font;
     }
+  }
+}
+
+/************** TIMELINE VIEW ***************/
+.timeline-mom {
+  display: flex;
+}
+
+.timeline-time {
+  flex: 0 0 112px;
+  text-align: right;
+  font-size: 10pt;
+  border-right: 3px solid @dark;
+  padding: 11px 15px 0 0;
+  position: relative;
+  &::before {
+    content: "";
+    border: 3px solid @dark;
+    background: @bg-grey;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+  }
+}
+
+.timeline-content {
+  padding: 5px 5px 5px 15px;
+  h3 {
+    margin-top: 0;
+  }
+  ul {
+    margin-bottom: 0;
+    padding-left: 30px;
+  }
+  li {
+    line-height: 1.2;
   }
 }
 

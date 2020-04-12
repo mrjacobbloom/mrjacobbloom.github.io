@@ -8,11 +8,11 @@
     'is a great speler',
     'has a voice like an angel',
     'smells nice (usually)',
-    'should be hired by you',
+    // 'should be hired by you',
     'has been outside',
     'does awesome music things',
     'looks good in clothing',
-    'doesn\'t like his own posts',
+    // 'doesn\'t like his own posts',
     'knows the ABC\'s backwards',
     'never lies (not counting this)'
   ];
