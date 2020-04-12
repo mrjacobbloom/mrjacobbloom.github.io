@@ -139,6 +139,10 @@ body {
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
+.footer .container {
+  display: flex;
+  align-items: center;
+}
 .contact-links {
   display: inline-block;
   font-size: 40px;
@@ -151,4 +155,7 @@ body {
 }
 .contact-links a:hover {
   transform: scale(1.1);
+}
+.copyright {
+  margin-left: 10px;
 }
