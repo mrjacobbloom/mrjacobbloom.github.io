@@ -144,6 +144,9 @@ li {
 .button:active {
   background-color: #e6e6e6;
 }
+.soundcloud-widget {
+  width: 100%;
+}
 .content-contact-links {
   display: block;
   margin: 15px 0;
