@@ -2,9 +2,24 @@
 
 /************** PROJECT CAROUSEL ***************/
 
+// make it less terrible before initialized
+.main-carousel:not(.flickity-enabled) {
+  display: flex;
+  padding: 10px 0;
+  margin-top: -10px;
+  overflow: hidden;
+  .carousel-cell {
+    flex: 0 0 197px;
+    &:first-child {
+      transform: @hoverscale;
+    }
+  }
+}
+
 .hero.carousel-cell {
   width: 197px;
   height: 150px;
+  display: inline-flex;
   &.is-selected {
     z-index: 3;
     transform: @hoverscale;

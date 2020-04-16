@@ -1,7 +1,20 @@
 /************** PROJECT CAROUSEL ***************/
+.main-carousel:not(.flickity-enabled) {
+  display: flex;
+  padding: 10px 0;
+  margin-top: -10px;
+  overflow: hidden;
+}
+.main-carousel:not(.flickity-enabled) .carousel-cell {
+  flex: 0 0 197px;
+}
+.main-carousel:not(.flickity-enabled) .carousel-cell:first-child {
+  transform: scale(1.05);
+}
 .hero.carousel-cell {
   width: 197px;
   height: 150px;
+  display: inline-flex;
 }
 .hero.carousel-cell.is-selected {
   z-index: 3;

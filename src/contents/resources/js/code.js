@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+(() => {
   var carousel = new window.Flickity( '#projects-carousel', {
     wrapAround: true,
     pageDots: false,
@@ -9,4 +9,4 @@ window.addEventListener('load', () => {
     const newDescription = document.querySelector(`.project-description[data-slide="${slideId}"]`);
     if (newDescription) newDescription.classList.add('visible');
   });
-});
+})();
