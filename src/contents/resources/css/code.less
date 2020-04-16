@@ -5,6 +5,16 @@
 .hero.carousel-cell {
   width: 197px;
   height: 150px;
+  &.is-selected {
+    z-index: 3;
+    transform: @hoverscale;
+    .hero-content {
+      opacity: 0;
+    }
+    .hero-bg {
+      opacity: 1;
+    }
+  }
 }
 
 .flickity-viewport {
@@ -88,8 +98,5 @@
   ul {
     margin-bottom: 0;
     padding-left: 30px;
-  }
-  li {
-    line-height: 1.2;
   }
 }

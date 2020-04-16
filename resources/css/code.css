@@ -3,6 +3,16 @@
   width: 197px;
   height: 150px;
 }
+.hero.carousel-cell.is-selected {
+  z-index: 3;
+  transform: scale(1.05);
+}
+.hero.carousel-cell.is-selected .hero-content {
+  opacity: 0;
+}
+.hero.carousel-cell.is-selected .hero-bg {
+  opacity: 1;
+}
 .flickity-viewport {
   padding: 10px 0;
   margin-top: -10px;
@@ -78,7 +88,4 @@
 .timeline-content ul {
   margin-bottom: 0;
   padding-left: 30px;
-}
-.timeline-content li {
-  line-height: 1.2;
 }

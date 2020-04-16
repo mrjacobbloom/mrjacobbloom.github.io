@@ -1,12 +1,20 @@
-This is my website. It runs on wintersmith and nunjucks, which compile it into a static site for github pages.
+This is my website. It's compiled via the [Wintersmith](http://wintersmith.io/)
+static site generator.
 
 ## building
-```
+
+```bash
 npm run preview
 npm run build
 ```
 
 Preview runs on `http://localhost:8080/`
+
+## making a video
+
+```bash
+ffmpeg -i lumpy.mov  -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" lumpy.mp4
+```
 
 ## credits
 - [trianglify.io](https://trianglify.io/) - polyart background image

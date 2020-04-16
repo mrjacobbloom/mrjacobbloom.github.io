@@ -20,14 +20,13 @@ body {
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   background: #1f6268;
+  text-decoration: none;
 }
-.hero:not(.carousel-cell):hover,
-.hero.is-selected {
+.hero:not(.carousel-cell):hover {
   z-index: 3;
   transform: scale(1.05);
 }
-.hero:not(.carousel-cell):hover .hero-bg,
-.hero.is-selected .hero-bg {
+.hero:not(.carousel-cell):hover .hero-bg {
   opacity: 0.8;
 }
 .hero .hero-bg {
@@ -110,6 +109,10 @@ p {
 p a {
   color: #1f6268;
   cursor: pointer;
+}
+p,
+li {
+  line-height: 1.2;
 }
 .right {
   float: right;

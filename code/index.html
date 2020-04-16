@@ -80,15 +80,27 @@
   </div>
   <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
-      <video autoplay loop muted src="/resources/video/fruit.mp4"></video>
+      <video autoplay loop muted src="/resources/video/lumpy.mp4"></video>
     </div>
-    <div class="hero-content">Fruit</div>
+    <div class="hero-content">Lumpy</div>
   </div>
   <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/notochord-gui.mp4"></video>
     </div>
     <div class="hero-content">Notochord</div>
+  </div>
+  <div class="carousel-cell hero">
+    <div class="hero-bg" aria-hidden="true">
+      <video autoplay loop muted src="/resources/video/fruit.mp4"></video>
+    </div>
+    <div class="hero-content">Fruit</div>
+  </div>
+  <div class="carousel-cell hero">
+    <div class="hero-bg" aria-hidden="true">
+      <video autoplay loop muted src="/resources/video/lettuce.mp4"></video>
+    </div>
+    <div class="hero-content">Lettuce</div>
   </div>
   <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
@@ -127,6 +139,36 @@
     <a class="triangle button" href="https://github.com/mrjacobbloom/teamWORK">Learn more</a>
   </div>
   <div class="project-description" data-slide="1">
+    <h3>Lumpy</h3>
+    <p class="project-technologies">C++, OpenGL, QT</p>
+    <p>
+      Lumpy was my final project for a class on OpenGL graphics. It's an
+      additive landmass editor with a God Mode and 1st-person mode. As the
+      height increases, the texture will change to grass/plants, then to rock,
+      and then to snow and snow will begin to fall. I'm particularly proud of
+      the mouse interactions in this app, as OpenGL doesn't make that easy.
+    </p>
+    <a class="triangle button" href="https://github.com/mrjacobbloom/lumpy">Learn more</a>
+  </div>
+  <div class="project-description" data-slide="2">
+    <h3>Notochord</h3>
+    <p class="project-technologies">JavaScript, React, SVG, MIDI, BNF Parser, Bootstrap</p>
+    <p>
+      Notochord is a long-term passion project of mine. Long story short, it's a
+      chord player which can play a song in one of several styles. It has a
+      graphical lead-sheet editor inspired by iReal Pro for editing songs.
+    </p>
+    <p>
+      The most complicated and exciting part of Notochord is its declarative
+      domain-specific language for describing a musical style, called
+      <a href="https://github.com/notochord/playback">Playback</a>. The Playback
+      interpreter is a behemoth and work-in-progress, but I'm very excited about
+      the direction it's headed. It uses a BNF parser generator.
+    </p>
+    <a class="triangle button" href="http://notochord.herokuapp.com/">Try it</a>
+    <a class="triangle button" href="https://github.com/notochord/notochord">Learn more</a>
+  </div>
+  <div class="project-description" data-slide="3">
     <h3>Fruit</h3>
     <p class="project-technologies">C++, OpenGL, GLUT</p>
     <p>
@@ -135,26 +177,21 @@
     </p>
     <a class="triangle button" href="https://github.com/mrjacobbloom/fruit">Learn more</a>
   </div>
-  <div class="project-description" data-slide="2">
-    <h3>Notochord</h3>
-    <p class="project-technologies">JavaScript, React, SVG, MIDI, BNF Parser</p>
+  <div class="project-description" data-slide="4">
+    <h3>Lettuce</h3>
+    <p class="project-technologies">JavaScript, BNF Parser</p>
     <p>
-      Notochord is a long-term passion project of mine. Long story short, it's a
-      chord player which can play a song in one of several styles. It has a
-      graphical lead-sheet editor inspired by iReal Pro for editing songs.
+      The Lettuce AST Explorer is an impletmentation of a toy language from my
+      Principles of Programming class. It started out as my experimentations
+      with pattern matching in JS, but it grew into a full-blown BNF-powered
+      parser and pattern-matching-powered interpreter. I gave a presentation on
+      it in my class, if you'd like to check that out.
     </p>
-    <p>
-      The most complicated and exciting part of Notochord is its declarative
-      language for describing a musical style, called
-      <a href="https://github.com/notochord/playback">Playback</a>. The Playback
-      interpreter is a behemoth and work-in-progress, but I'm very excited about
-      the direction it's headed. It uses a BNF parser generator to generate a
-      parser from its grammar.
-    </p>
-    <a class="triangle button" href="http://notochord.herokuapp.com/">Try it</a>
-    <a class="triangle button" href="https://github.com/notochord/notochord">Learn more</a>
+    <a class="triangle button" href="https://jacobbloom.dev/pattern-matcher.js/lettuce/playground/index.html">Try It</a>
+    <a class="triangle button" href="https://docs.google.com/presentation/d/1WILaZ4DszKBVeiOUsmyxBdaxqeTNQKpVTq4OHLoTbtQ/edit?usp=sharing">The Presentation</a>
+    <a class="triangle button" href="https://github.com/mrjacobbloom/pattern-matcher.js">GitHub Repo</a>
   </div>
-  <div class="project-description" data-slide="3">
+  <div class="project-description" data-slide="5">
     <h3>Elemental</h3>
     <p class="project-technologies">JavaScript</p>
     <p>
@@ -162,9 +199,9 @@
       a collaboration with several friends, and I spearheaded a rewrite of their
       block editor.
     </p>
-    <a class="triangle button" href="https://github.com/ElementalCode/elemental">Learn more</a>
+    <a class="triangle button" href="https://github.com/ElementalCode/elemental">GitHub Repo</a>
   </div>
-  <div class="project-description" data-slide="4">
+  <div class="project-description" data-slide="6">
     <h3>Editor</h3>
     <p class="project-technologies">JavaScript</p>
     <p>
@@ -173,9 +210,9 @@
       selection and copy-paste in a way that felt pretty natural.
     </p>
     <a class="triangle button" href="https://jacobbloom.dev/editor/">Try it</a>
-    <a class="triangle button" href="https://github.com/mrjacobbloom/editor">Learn more</a>
+    <a class="triangle button" href="https://github.com/mrjacobbloom/editor">GitHub Repo</a>
   </div>
-  <div class="project-description" data-slide="5">
+  <div class="project-description" data-slide="7">
     <h3>Yolobrella</h3>
     <p class="project-technologies">JavaScript, JS Canvas</p>
     <p>
