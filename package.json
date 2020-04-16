@@ -7,10 +7,9 @@
     "browsernizr": "*",
     "natives": "^1.1.5",
     "wintersmith": "*",
-    "wintersmith-browserify": "*",
     "wintersmith-less": "*",
-    "wintersmith-nunjucks": "*",
-    "wintersmith-livereload": "*"
+    "wintersmith-livereload": "*",
+    "wintersmith-nunjucks": "*"
   },
   "private": true
 }

@@ -1,5 +1,11 @@
 {% extends 'content_page.html' %}
 {% set pagename = 'Code' %}
+{% block head %}
+  <link href="/resources/css/flickity.min.css" rel="stylesheet">
+  <link href="/resources/css/code.css" rel="stylesheet">
+  <script src="/resources/js/flickity.min.js"></script>
+  <script src="/resources/js/code.js"></script>
+{% endblock %}
 {% block body %}
 <p>
   I’m a fun, energetic, resourceful full-stack developer with a passion for
@@ -16,46 +22,119 @@
 </p>
 
 <h2>Projects</h2>
-<p>
-  Here are a few of my favorite personal and team projects:
-</p>
-<div class="hero-mom">
-  <a href="https://github.com/mrjacobbloom/teamWORK" class="hero" target="_blank">
+<div class="main-carousel" id="projects-carousel">
+  <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/natural-neighbors.mp4"></video>
     </div>
     <div class="hero-content">Natural Neighbors</div>
-  </a>
-  <a href="https://github.com/mrjacobbloom/fruit" class="hero" target="_blank">
+  </div>
+  <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/fruit.mp4"></video>
     </div>
     <div class="hero-content">Fruit</div>
-  </a>
-  <a href="https://notochord.github.io/notochord/demo/" class="hero" target="_blank">
+  </div>
+  <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
-      <video autoplay loop muted src="/resources/video/notochord.mp4"></video>
+      <video autoplay loop muted src="/resources/video/notochord-gui.mp4"></video>
     </div>
     <div class="hero-content">Notochord</div>
-  </a>
-  <a href="https://github.com/ElementalCode/elemental" class="hero" target="_blank">
+  </div>
+  <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/elemental.mp4"></video>
     </div>
     <div class="hero-content">Elemental</div>
-  </a>
-  <a href="https://mrjacobbloom.github.io/editor/" class="hero" target="_blank">
+  </div>
+  <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/editor.mp4"></video>
     </div>
     <div class="hero-content">Editor</div>
-  </a>
-  <a href="/code/yolobrella/" class="hero" target="_blank">
+  </div>
+  <div class="carousel-cell hero">
     <div class="hero-bg" aria-hidden="true">
       <video autoplay loop muted src="/resources/video/yolobrella.mp4"></video>
     </div>
     <div class="hero-content">Yolobrella</div>
-  </a>
+  </div>
+</div>
+<div class="project-descriptions">
+  <div class="project-description visible" data-slide="0">
+    <h3>Natural Neighbors</h3>
+    <p class="project-technologies">JavaScript, Node.js, Express.js, Heroku, Travis CI</p>
+    <p>
+      Natural Neighbors was my team's term project in a Software Development
+      class. It's a social network where animal enthusiasts can post about
+      wildlife sightings. I was lead developer and worked on UI Design for this
+      project.
+    </p>
+    <p>
+      A user could create a post with what animal they saw and a description of
+      the sighting. They could also add a location to their post using a Google
+      Maps integration. Then, anyone around the world could see that post.
+    </p>
+    <a class="triangle button" href="https://github.com/mrjacobbloom/teamWORK">Learn more</a>
+  </div>
+  <div class="project-description" data-slide="1">
+    <h3>Fruit</h3>
+    <p class="project-technologies">C++, OpenGL, GLUT</p>
+    <p>
+      Fruit was my final project for a class on OpenGL graphics. It's a game in
+      which the user creates a smoothie by dragging fruits into a blender.
+    </p>
+    <a class="triangle button" href="https://github.com/mrjacobbloom/fruit">Learn more</a>
+  </div>
+  <div class="project-description" data-slide="2">
+    <h3>Notochord</h3>
+    <p class="project-technologies">JavaScript, React, SVG, MIDI, BNF Parser</p>
+    <p>
+      Notochord is a long-term passion project of mine. Long story short, it's a
+      chord player which can play a song in one of several styles. It has a
+      graphical lead-sheet editor inspired by iReal Pro for editing songs.
+    </p>
+    <p>
+      The most complicated and exciting part of Notochord is its declarative
+      language for describing a musical style, called
+      <a href="https://github.com/notochord/playback">Playback</a>. The Playback
+      interpreter is a behemoth and work-in-progress, but I'm very excited about
+      the direction it's headed. It uses a BNF parser generator to generate a
+      parser from its grammar.
+    </p>
+    <a class="triangle button" href="http://notochord.herokuapp.com/">Try it</a>
+    <a class="triangle button" href="https://github.com/notochord/notochord">Learn more</a>
+  </div>
+  <div class="project-description" data-slide="3">
+    <h3>Elemental</h3>
+    <p class="project-technologies">JavaScript</p>
+    <p>
+      Elemental was a drag-and-drop HTML editor inspired by MIT Scratch. It was
+      a collaboration with several friends, and I spearheaded a rewrite of their
+      block editor.
+    </p>
+    <a class="triangle button" href="https://github.com/ElementalCode/elemental">Learn more</a>
+  </div>
+  <div class="project-description" data-slide="4">
+    <h3>Editor</h3>
+    <p class="project-technologies">JavaScript</p>
+    <p>
+      Editor was my entry into a "build-your-own code editor" contest. While
+      it wasn't pleasant, per se, to use, I did manage to implement text
+      selection and copy-paste in a way that felt pretty natural.
+    </p>
+    <a class="triangle button" href="https://jacobbloom.dev/editor/">Try it</a>
+    <a class="triangle button" href="https://github.com/mrjacobbloom/editor">Learn more</a>
+  </div>
+  <div class="project-description" data-slide="5">
+    <h3>Yolobrella</h3>
+    <p class="project-technologies">JavaScript, JS Canvas</p>
+    <p>
+      Yolobrella is a cute lil game in which you play a cloud and use your
+      powers of rain and shine to grow a plant.
+    </p>
+    <a class="triangle button" href="https://jacobbloom.dev/code/yolobrella/">Try it</a>
+  </div>
 </div>
 
 <h2>Work Experience</h2>

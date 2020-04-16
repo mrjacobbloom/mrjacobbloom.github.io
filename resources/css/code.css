@@ -1,0 +1,84 @@
+/************** PROJECT CAROUSEL ***************/
+.hero.carousel-cell {
+  width: 197px;
+  height: 150px;
+}
+.flickity-viewport {
+  padding: 10px 0;
+  margin-top: -10px;
+}
+/************** PROJECT DESCRIPTION ***************/
+.project-descriptions {
+  border: 1px solid #1f6268;
+  padding: 10px;
+  position: relative;
+  margin-top: 5px;
+}
+.project-descriptions::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fafafa;
+  border: 1px solid transparent;
+  border-top-color: #1f6268;
+  border-right-color: #1f6268;
+  top: -6px;
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+}
+.project-descriptions h3 {
+  margin: 0;
+}
+.project-descriptions .button {
+  display: inline-block;
+  margin-top: 10px;
+}
+.project-description {
+  display: none;
+}
+.project-description.visible {
+  display: block;
+}
+.project-technologies {
+  font-style: italic;
+  font-size: 10pt;
+  margin: 10px 0;
+}
+/************** TIMELINE VIEW ***************/
+.timeline-mom {
+  display: flex;
+}
+.timeline-time {
+  flex: 0 0 112px;
+  text-align: right;
+  font-size: 10pt;
+  border-right: 3px solid #1f6268;
+  padding: 11px 15px 0 0;
+  position: relative;
+}
+.timeline-time::before {
+  content: "";
+  border: 3px solid #1f6268;
+  background: #fafafa;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+}
+.timeline-content {
+  padding: 5px 5px 5px 15px;
+}
+.timeline-content h3 {
+  margin-top: 0;
+}
+.timeline-content ul {
+  margin-bottom: 0;
+  padding-left: 30px;
+}
+.timeline-content li {
+  line-height: 1.2;
+}

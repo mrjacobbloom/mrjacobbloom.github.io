@@ -15,14 +15,19 @@ body {
   text-align: center;
   transition: transform .4s;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   background: #1f6268;
 }
-.hero:hover {
+.hero:not(.carousel-cell):hover,
+.hero.is-selected {
   z-index: 3;
   transform: scale(1.05);
 }
-.hero:hover .hero-bg {
+.hero:not(.carousel-cell):hover .hero-bg,
+.hero.is-selected .hero-bg {
   opacity: 0.8;
 }
 .hero .hero-bg {
@@ -46,11 +51,9 @@ body {
   text-decoration: none;
   font-size: 25pt;
   font-family: 'Roboto', sans-serif;
-  position: absolute;
-  text-shadow: 1px 1px 2px #333;
+  text-shadow: 0 0 6px #133b3f;
   left: 0;
   z-index: 2;
-  top: calc( 50% - 1ex );
 }
 /************** MOBILE ***************/
 @media (max-width: 800px) {
@@ -70,10 +73,11 @@ body {
   flex-wrap: wrap;
   margin: 0 -5px;
 }
+.hero-mom .hero {
+  flex: 1 0 395px;
+}
 .hero {
-  flex-grow: 1;
-  min-width: 395px;
-  max-width: 395px;
+  width: 395px;
   height: 300px;
   margin: 5px;
 }
@@ -115,6 +119,27 @@ p a {
   float: left;
   margin: 0 10px 5px 0;
 }
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  background-color: #1f6268;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all .2s;
+}
+.button strong {
+  font-weight: 300;
+}
+.button:hover {
+  background-color: #2b878f;
+  transform: scale(1.05);
+}
+.button:active {
+  background-color: #e6e6e6;
+}
 .content-contact-links {
   display: block;
   margin: 15px 0;
@@ -128,42 +153,6 @@ p a {
 }
 .content-contact-links a span {
   font-family: 'Roboto', sans-serif;
-}
-/************** TIMELINE VIEW ***************/
-.timeline-mom {
-  display: flex;
-}
-.timeline-time {
-  flex: 0 0 112px;
-  text-align: right;
-  font-size: 10pt;
-  border-right: 3px solid #1f6268;
-  padding: 11px 15px 0 0;
-  position: relative;
-}
-.timeline-time::before {
-  content: "";
-  border: 3px solid #1f6268;
-  background: #fafafa;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  position: absolute;
-  top: 10px;
-  right: -10px;
-}
-.timeline-content {
-  padding: 5px 5px 5px 15px;
-}
-.timeline-content h3 {
-  margin-top: 0;
-}
-.timeline-content ul {
-  margin-bottom: 0;
-  padding-left: 30px;
-}
-.timeline-content li {
-  line-height: 1.2;
 }
 /************** MOBILE ***************/
 @media (max-width: 800px) {

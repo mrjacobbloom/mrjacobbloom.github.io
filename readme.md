@@ -9,7 +9,8 @@ npm run build
 Preview runs on `http://localhost:8080/`
 
 ## credits
-- The background image is from https://trianglify.io/
-- I used MuseScore for the sheet music graphics
-- I use a lot of Google Fonts. Thanx Google
-- I use Font Awesome throughout the site
+- [trianglify.io](https://trianglify.io/) - polyart background image
+- [MuseScore](https://musescore.org/en) - sheet music graphic
+- [Google Fonts](https://fonts.google.com/) - fonts
+- [Font Awesome](https://fontawesome.com/) - icon font
+- [Flickity](https://flickity.metafizzy.co/) - carousel
