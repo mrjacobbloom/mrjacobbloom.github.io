@@ -155,6 +155,9 @@ body:not(.animIn) #animIn-overlay {
   z-index: 1;
   transform: scale(1.05);
 }
+.hero-bg.code-hero-bg {
+  object-position: top left;
+}
 /************** ABOUT ME STUFF ***************/
 .scroll-message {
   display: block;

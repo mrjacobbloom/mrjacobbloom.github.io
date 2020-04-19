@@ -9,11 +9,9 @@ if(sessionStorage.getItem('noAnimate')) {
     console.log('bb')
     document.body.classList.remove('animIn');
     document.body.classList.add('cancelAnimIn');
-    resizeHeroVids();
   });
   setTimeout(() => {
     document.body.classList.remove('animIn');
-    resizeHeroVids();
   }, 3000);
 }
 
