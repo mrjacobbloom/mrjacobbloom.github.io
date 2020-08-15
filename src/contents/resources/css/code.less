@@ -5,13 +5,13 @@
 // make it less terrible before initialized
 .main-carousel:not(.flickity-enabled) {
   display: flex;
-  padding: 10px 0;
-  margin-top: -10px;
+  padding: 45px 0;
+  margin-top: -20px;
   overflow: hidden;
   .carousel-cell {
     flex: 0 0 197px;
     &:first-child {
-      transform: @hoverscale;
+      transform: scale(1.5);
     }
   }
 }
@@ -22,7 +22,7 @@
   display: inline-flex;
   &.is-selected {
     z-index: 3;
-    transform: @hoverscale;
+    transform: scale(1.5);
     .hero-content {
       opacity: 0;
     }
@@ -33,8 +33,8 @@
 }
 
 .flickity-viewport {
-  padding: 10px 0;
-  margin-top: -10px;
+  padding: 45px 0;
+  margin-top: -20px;
 }
 
 /************** PROJECT DESCRIPTION ***************/
