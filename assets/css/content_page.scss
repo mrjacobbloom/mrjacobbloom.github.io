@@ -1,0 +1,135 @@
+---
+---
+
+@import "consts";
+
+/************** START WITH THE BIG STUFF ***************/
+body {
+  padding-top:  $nav-height + 10px;
+  padding-bottom: 80px;
+}
+
+/************** FOOTER ***************/
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/************** HERO ***************/
+@import "hero";
+
+.hero-mom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.hero-mom .hero {
+  flex: 1 0 395px;
+}
+.hero {
+  width: 395px;
+  height: 300px;
+  margin: 5px;
+}
+
+/************** CONTENT ***************/
+h1, h2, h3 {
+  font-family: $display-font;
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 35pt;
+}
+
+h2 {
+  font-size: 20pt;
+  &::before {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+h3 {
+  font-size: 17pt;
+}
+
+p {
+  text-align: justify;
+  margin: 5px 0;
+  & a {
+    color: $dark;
+    cursor: pointer;
+  }
+}
+
+p, li {
+  line-height: 1.2;
+}
+
+.right {
+  float: right;
+  margin: 0 0 5px 10px;
+}
+.left {
+  float: left;
+  margin: 0 10px 5px 0;
+}
+
+.button {
+  font-family: $display-font;
+  font-weight: 300;
+  display: inline-block;
+  background-color: $dark;
+  color: $light;
+  padding: 5px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all .2s;
+  strong {
+    font-weight: 300;
+  }
+  &:hover {
+    background-color: lighten($dark, 10%);
+    transform: scale(1.05);
+  }
+  &:active {
+    background-color: darken($light, 10%);
+  }
+}
+
+.soundcloud-widget {
+  width: 100%;
+}
+
+.content-contact-links {
+  display: block;
+  margin: 15px 0;
+  a {
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+      color: $dark;
+    }
+    span {
+      font-family: $display-font;
+    }
+  }
+}
+
+/************** MOBILE ***************/
+@media (max-width: $width) {
+  body {
+    padding-top: 115px;
+  }
+  .hero-mom {
+    flex-direction: column;
+  }
+  .contact-links {
+    font-size: 20px;
+  }
+}

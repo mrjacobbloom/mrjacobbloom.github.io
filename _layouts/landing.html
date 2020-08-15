@@ -1,0 +1,14 @@
+---
+layout: skeleton
+---
+{% assign bodyClass = 'animIn' %}
+{% assign animIn = true %}
+
+<link href="/assets/css/index.css" rel="stylesheet">
+
+<a href="#" id="animIn-overlay" aria-label="Skip intro" title="Skip intro"></a>
+{% include navbar.html %}
+<div class="content">
+  {{ content }}
+  {% include footer.html %}
+</div>

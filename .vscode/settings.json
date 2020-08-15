@@ -1,9 +1,10 @@
 {
   "files.exclude": {
-    "code/": true,
-    "favicon.ico": true,
-    "index.html": true,
-    "music/": true,
-    "resources/": true
+    // "code/": true,
+    // "favicon.ico": true,
+    // "index.html": true,
+    // "music/": true,
+    // "resources/": true
+    "_site": true
   }
 }

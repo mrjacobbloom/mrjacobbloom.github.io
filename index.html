@@ -1,108 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    
-    <meta name="description" content="Hey, I'm Jacob! I’m a fun, energetic, resourceful full-stack developer with a passion for JavaScript.">
-    <meta name="keywords" content="cu, boulder, university of colorado, colorado, javascript, programmer, developer, servicenow, piano, musician, web, design, dev, development">
-    <meta property="og:title" content="Jacob Bloom">
-    <meta property="og:description" content="Hey, I'm Jacob! I’m a fun, energetic, resourceful full-stack developer with a passion for JavaScript.">
-    
-    <link rel="icon" href="/favicon.ico">
-    
-      <title>Jacob Bloom</title>
-    
-    
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Sanchez" rel="stylesheet">
-    <link href="/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/resources/css/global.css" rel="stylesheet">
-    
-    
-  <link href="/resources/css/index.css" rel="stylesheet">
+---
+layout: landing
+---
 
-  </head>
-
-  <body class="animIn">
-    
-  <a href="#" id="animIn-overlay" aria-label="Skip intro" title="Skip intro"></a>
-  <div id="navbar" class="triangle" role="navigation">
-  <div class="container">
-    <a href="/" class="wordmark">
-      <span class="wordmark-name" aria-label="Home">Jacob Bloom</span>
-      <div id="tagline" aria-hidden="true">
-        <div class="flipper">
-      		<div class="front"></div>
-      		<div class="back"></div>
-      	</div>
-      </div>
-    </a>
+<div class="hero-mom">
+  <a href="code/" class="hero">
+    <video class="hero-bg code-hero-bg" aria-hidden="true" autoplay muted loop src="/assets/video/code2.mp4"></video>
+    <div class="hero-content">So yeah, I can code if you want</div>
+  </a>
+  <a href="music/" class="hero">
+    <video class="hero-bg" aria-hidden="true" autoplay muted loop src="/assets/video/music.mp4"></video>
+    <div class="hero-content">I also do music if that's more your thing</div>
+  </a>
+</div>
+<a class="scroll-message" href="#about">&mdash; or keep scrolling to learn more about me &mdash;</a>
+<div class="container" id="about" role="main">
+  <h2>About Me</h2>
+  <p>
+    Hey, I'm Jacob!
+    I’m a fun, energetic, resourceful programmer with a passion for
+    JavaScript. I have egregious levels of experience in both client- and
+    server-side JS, and I'm currently putting that knowledge to the test
+    at my job with <a href="http://anark.com/">Anark</a>.
+  </p>
+  <p>
+    I'm also a musician. Since 2019, I've sung with the Denver Gay Men's
+    Chorus. Before that, I sang with a college <em>a cappella</em> group
+    called <a href="http://www.inthebuff.org">In the Buff</a>. I served as
+    their music director for my senior year of college (which was also their
+    25th anniversary) and worked on an album with them.
+  </p>
+  <p>
+    I dabble in music production
+    on my own, which you can hear for yourself on my
+    <a href="https://soundcloud.com/mrjacobbloom">SoundCloud</a>. I've
+    played piano since I was little and I'm often involved in community
+    theatre.
+  </p>
+  <div class="contact-button-wrapper">
+    <a class="contact-button triangle" href="mailto:mr.jacob.bloom@gmail.com"><strong>heck</strong> yeah i'll contact you</a>
   </div>
 </div>
-<script src="/resources/js/navbar.js""></script>
-
-  <div class="content">
-    <div class="hero-mom">
-      <a href="code/" class="hero">
-        <video class="hero-bg code-hero-bg" aria-hidden="true" autoplay muted loop src="/resources/video/code2.mp4"></video>
-        <div class="hero-content">So yeah, I can code if you want</div>
-      </a>
-      <a href="music/" class="hero">
-        <video class="hero-bg" aria-hidden="true" autoplay muted loop src="/resources/video/music.mp4"></video>
-        <div class="hero-content">I also do music if that's more your thing</div>
-      </a>
-    </div>
-    <a class="scroll-message" href="#about">&mdash; or keep scrolling to learn more about me &mdash;</a>
-    <div class="container" id="about" role="main">
-      <h2>About Me</h2>
-      <p>
-        Hey, I'm Jacob!
-        I’m a fun, energetic, resourceful programmer with a passion for
-        JavaScript. I have egregious levels of experience in both client- and
-        server-side JS, and I'm currently putting that knowledge to the test
-        at my job with <a href="http://anark.com/">Anark</a>.
-      </p>
-      <p>
-        I'm also a musician. Since 2019, I've sung with the Denver Gay Men's
-        Chorus. Before that, I sang with a college <em>a cappella</em> group
-        called <a href="http://www.inthebuff.org">In the Buff</a>. I served as
-        their music director for my senior year of college (which was also their
-        25th anniversary) and worked on an album with them.
-      </p>
-      <p>
-        I dabble in music production
-        on my own, which you can hear for yourself on my
-        <a href="https://soundcloud.com/mrjacobbloom">SoundCloud</a>. I've
-        played piano since I was little and I'm often involved in community
-        theatre.
-      </p>
-      <div class="contact-button-wrapper">
-        <a class="contact-button triangle" href="mailto:mr.jacob.bloom@gmail.com"><strong>heck</strong> yeah i'll contact you</a>
-      </div>
-    </div>
-    <script src="/resources/js/index.js"></script>
-    <footer class="footer triangle">
-  <div class="container">
-    <div class="contact-links">
-      <a href="mailto:mr.jacob.bloom@gmail.com" aria-label="Email" title="Email"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
-      |
-      <a href="https://github.com/mrjacobbloom" aria-label="Github" title="Github"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-      <a href="https://jsfiddle.net/user/mrjacobbloom/" aria-label="JSFiddle" title="JSFiddle"><i class="fa fa-jsfiddle" aria-hidden="true"></i></a>
-      |
-      <a href="https://www.youtube.com/user/jswingcovers" aria-label="Youtube" title="Youtube"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-      <a href="https://soundcloud.com/mrjacobbloom" aria-label="SoundCloud" title="SoundCloud"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
-      |
-    </div>
-    <span class="copyright">
-      &copy; <span id="year"><script>document.querySelector('#year').textContent = (new Date()).getFullYear();</script></span> Jacob Bloom
-    </span>
-  </div>
-</footer>
-
-  </div>
-
-  </body>
-</html>
+<script src="/assets/js/index.js"></script>

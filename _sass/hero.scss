@@ -1,0 +1,60 @@
+@import "consts";
+
+.hero {
+  text-align: center;
+  transition: transform .4s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $shadow;
+  background: $dark;
+  text-decoration: none;
+  &:not(.carousel-cell):hover {
+    z-index: 3;
+    transform: $hoverscale;
+    .hero-bg {
+      opacity: 0.8;
+    }
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .4s;
+    background: $dark;
+    opacity: 0.4;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .hero-content {
+    display: inline-block;
+    color: $light;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25pt;
+    font-family: $display-font;
+    text-shadow: 0 0 6px #133b3f;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+/************** MOBILE ***************/
+@media (max-width: $width) {
+  .hero {
+    min-width: unset;
+    max-width: unset;
+    &:hover {
+      transform: none !important;
+      .hero-bg {
+        filter: brightness(.8);
+      }
+    }
+  }
+}

@@ -1,14 +1,23 @@
-This is my website. It's compiled via the [Wintersmith](http://wintersmith.io/)
-static site generator.
+This is my website.
+
+## installing
+
+I know literally noithing about Ruby or its ecosystem and this was a very scary
+installation process
+
+```bash
+sudo gem install jekyll -v 3.9.0     
+gem install bundler
+bundle install
+```
 
 ## building
 
 ```bash
-npm run preview
-npm run build
+bundle exec jekyll serve
 ```
 
-Preview runs on `http://localhost:8080/`
+Preview runs on `http://localhost:4000/`
 
 ## making a video
 
