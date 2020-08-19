@@ -1,0 +1,1 @@
+declare var Flickity: typeof import('flickity');

@@ -11,10 +11,11 @@ gem install bundler
 bundle install
 ```
 
-## building
+## build / serve locally
 
 ```bash
-bundle exec jekyll serve
+npm run transpile
+npm run serve
 ```
 
 Preview runs on `http://localhost:4000/`

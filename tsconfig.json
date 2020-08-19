@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "noImplicitAny": true,
+    "outDir": "assets/js",
+    "sourceMap": true,
+    "strict": true
+  },
+  "include": ["assets/ts/*.ts"]
+}
