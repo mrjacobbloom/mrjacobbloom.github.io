@@ -85,6 +85,99 @@
   bottom: 0;
 }
 
+
+/************** INTRO ANIMATION ***************/
+#navbar {
+  transition: transform 2s $easeInOutCubic;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+body.animIn #navbar {
+  transform: translateY(calc(50vh - (#{$nav-height} / 2)));
+  animation: navbarSlideUp 2s 1 $easeInOutCubic;
+}
+
+@keyframes navbarSlideUp {
+  0% {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(calc(50vh - (#{$nav-height} / 2) + 100px));
+  }
+  
+  99% {
+    pointer-events: none;
+  }
+
+  100% {
+    pointer-events: auto;
+    opacity: 1;
+    ttransform: translateY(calc( 50vh - (#{$nav-height} / 2) ));
+  }
+}
+
+body.animIn .content {
+  overflow: hidden;
+  height: 0;
+}
+
+body:not(.animIn):not(.cancelAnimIn) .content {
+  animation: contentFadeIn 2s 1 $easeInOutCubic;
+}
+
+@keyframes contentFadeIn {
+  0% {
+    opacity: 0;
+  }
+  
+  33% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+#animIn-overlay {
+  z-index: 1;
+  background-color: $bg-grey;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body:not(.animIn) #animIn-overlay {
+  animation: backgroundFadeOut 2s 1 $easeInOutCubic;
+  opacity: 0;
+  display: none;
+}
+
+@keyframes backgroundFadeOut {
+  0% {
+    opacity: 1;
+    display: block;
+    pointer-events: all;
+  }
+  
+  33% {
+    opacity: 1;
+  }
+  
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
+}
+
+
 /************** MOBILE ***************/
 @media (max-width: $width) {
   #navbar {
