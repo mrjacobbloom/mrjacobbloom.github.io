@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "analogDOM.createElement",
+    "jsxFragmentFactory": "analogDOM.Fragment",
     "module": "es6",
+    "lib": ["es6", "DOM"],
     "noImplicitAny": true,
     "outDir": "assets/js",
     "sourceMap": true,
     "strict": true
   },
-  "include": ["assets/ts/*.ts"]
+  "include": ["assets/ts/*.ts", "assets/ts/*.tsx"]
 }
