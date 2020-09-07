@@ -67,6 +67,10 @@
   .button {
     display: inline-block;
     margin-top: 10px;
+    margin-right: 5px;
+    .fa {
+      padding-right: 0.5ex;
+    }
   }
 }
 
