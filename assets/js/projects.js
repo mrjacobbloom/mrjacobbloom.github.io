@@ -36,6 +36,7 @@ export var PROJECTS = [
             analogDOM.createElement("p", null, "Notochord is a long-term passion project of mine. Long story short, it's a chord player which can play a song in one of several styles. It has a graphical lead-sheet editor inspired by iReal Pro for editing songs."),
             analogDOM.createElement("p", null,
                 "The most complicated and exciting part of Notochord is its declarative domain-specific language for describing a musical style, called",
+                ' ',
                 analogDOM.createElement("a", { href: "https://github.com/notochord/playback" }, "Playback"),
                 ". The Playback interpreter is a behemoth and work-in-progress, but I'm very excited about the direction it's headed. I'm in the process of porting it to TypsScript, and it uses a BNF parser generator."))),
         buttons: [

@@ -63,7 +63,7 @@ export const PROJECTS: CodeProject[] = [
         </p>
         <p>
           The most complicated and exciting part of Notochord is its declarative
-          domain-specific language for describing a musical style, called
+          domain-specific language for describing a musical style, called{' '}
           <a href="https://github.com/notochord/playback">Playback</a>. The Playback
           interpreter is a behemoth and work-in-progress, but I'm very excited about
           the direction it's headed. I'm in the process of porting it to TypsScript,
