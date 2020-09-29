@@ -3,6 +3,10 @@
 
 @import "consts";
 
+html {
+  min-height: 100vh;
+}
+
 /************** START WITH THE BIG STUFF ***************/
 body {
   font-family: 'Sanchez', sans-serif;

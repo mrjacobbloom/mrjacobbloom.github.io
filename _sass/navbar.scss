@@ -112,7 +112,7 @@ body.animIn #navbar {
   100% {
     pointer-events: auto;
     opacity: 1;
-    ttransform: translateY(calc( 50vh - (#{$nav-height} / 2) ));
+    transform: translateY(calc( 50vh - (#{$nav-height} / 2) ));
   }
 }
 
