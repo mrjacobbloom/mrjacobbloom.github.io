@@ -30,6 +30,7 @@
     z-index: 1;
     object-fit: cover;
     object-position: center center;
+    pointer-events: none;
   }
   .hero-content {
     display: inline-block;

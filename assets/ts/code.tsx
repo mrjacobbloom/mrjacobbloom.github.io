@@ -9,7 +9,16 @@ const projectElems: {
 }[] = [];
 
 PROJECTS.forEach((project, index) => {
-  const $video = (<video className="hero-bg" aria-hidden="true" loop muted src={project.videoSrc}/>) as HTMLVideoElement;
+  const $video = (
+    <video
+      className="hero-bg"
+      aria-hidden="true"
+      loop
+      muted
+      playsinline
+      src={project.videoSrc}
+    />
+  ) as HTMLVideoElement;
   const $carouselItem = (
     <div class="carousel-cell hero">
       {$video}

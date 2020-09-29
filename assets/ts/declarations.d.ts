@@ -16,6 +16,10 @@ interface CodeProject {
 
 type Intrinsicify<T> = Partial<Omit<T, 'children' | 'class'>> & { class?: string; };
 
+interface HTMLVideoElement {
+  playsinline: boolean; // idk why this isn't in TS' version of the DOM
+}
+
 declare namespace JSX {
   interface IntrinsicElements {
     a: Intrinsicify<HTMLAnchorElement>;

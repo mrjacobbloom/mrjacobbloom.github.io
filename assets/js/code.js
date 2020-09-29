@@ -2,7 +2,7 @@ import * as analogDOM from './analogDOM.js';
 import { PROJECTS } from './projects.js';
 var projectElems = [];
 PROJECTS.forEach(function (project, index) {
-    var $video = (analogDOM.createElement("video", { className: "hero-bg", "aria-hidden": "true", loop: true, muted: true, src: project.videoSrc }));
+    var $video = (analogDOM.createElement("video", { className: "hero-bg", "aria-hidden": "true", loop: true, muted: true, playsinline: true, src: project.videoSrc }));
     var $carouselItem = (analogDOM.createElement("div", { "class": "carousel-cell hero" },
         $video,
         analogDOM.createElement("div", { className: "hero-content" }, project.title)));
