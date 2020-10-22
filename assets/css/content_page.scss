@@ -71,13 +71,48 @@ p, li {
   line-height: 1.2;
 }
 
-.right {
-  float: right;
-  margin: 0 0 5px 10px;
+.soundcloud-widget {
+  width: 100%;
 }
-.left {
-  float: left;
-  margin: 0 10px 5px 0;
+
+.right, .left, .soundcloud-widget {
+  box-shadow: $shadow;
+}
+
+@media (min-width: ($width + (2*300px))) {
+  .right {
+    margin-top: -2em;
+    position: absolute;
+    left: calc(100% + 15px);
+  }
+  .soundcloud-widget {
+    margin-top: -7em;
+    width: 280px;
+    height: 330px; // this is so sketchy
+    position: absolute;
+    left: calc(100% + 15px);
+  }
+  .left {
+    margin-top: -2em;
+    position: absolute;
+    right: calc(100% + 15px);
+  }
+}
+@media (max-width: ($width + (2*300px))) and (min-width: 550px) {
+  .right {
+    float: right;
+    margin: 0 0 5px 10px;
+  }
+  .left {
+    float: left;
+    margin: 0 10px 5px 0;
+  }
+}
+@media (max-width: 550px) {
+  .right, .left {
+    display: block;
+    margin: 5px auto;
+  }
 }
 
 .button {
@@ -100,10 +135,6 @@ p, li {
   &:active {
     background-color: darken($light, 10%);
   }
-}
-
-.soundcloud-widget {
-  width: 100%;
 }
 
 .content-contact-links {

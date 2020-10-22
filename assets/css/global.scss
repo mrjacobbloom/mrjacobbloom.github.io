@@ -25,6 +25,7 @@ body {
 .container {
   width: $width;
   margin: 0 auto;
+  position: relative;
   &::after {
     content: "";
     display: block;
@@ -78,6 +79,10 @@ body {
     &:hover {
       //color: lighten($dark, 10%);
       transform: scale(1.1);
+    }
+    img {
+      height: 35px;
+      margin-bottom: -2px;
     }
   }
 }
