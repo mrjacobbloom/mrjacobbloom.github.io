@@ -59,6 +59,11 @@ export var PROJECTS = [
         description: (analogDOM.createElement("p", null, "Echo is an experiment in metaprogramming with JavaScript proxies. It's a JavaScript object that, whenever you interact with it in any way, it prints the line of code you wrote with full syntax highlighting.")),
         buttons: [
             {
+                icon: 'play',
+                text: 'Try It',
+                href: 'https://npm.runkit.com/echo-proxy'
+            },
+            {
                 icon: 'github',
                 text: 'GitHub Repo',
                 href: 'https://github.com/mrjacobbloom/echo'

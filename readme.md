@@ -14,7 +14,7 @@ bundle install
 ## build / serve locally
 
 ```bash
-npm run transpile
+npm run transpile # you DO have to do this before pushing ts changes!!!
 npm run serve
 
 ## Or if you can't deal with jekyll and just want to edit yolobrella
