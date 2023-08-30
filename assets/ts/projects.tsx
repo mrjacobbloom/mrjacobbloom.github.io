@@ -97,6 +97,11 @@ export const PROJECTS: CodeProject[] = [
     ),
     buttons: [
       {
+        icon: 'play',
+        text: 'Try It',
+        href: 'https://npm.runkit.com/echo-proxy',
+      },
+      {
         icon: 'github',
         text: 'GitHub Repo',
         href: 'https://github.com/mrjacobbloom/echo',
