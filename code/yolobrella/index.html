@@ -9,6 +9,7 @@ permalink: /code/yolobrella/
 <meta property="og:title" content="Yolobrella"/>
 <meta property="og:app_id" content="1406093359679931"/>
 <meta property="og:type" content="game" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Yolobrella</title>
 <link href="styles.css" rel="stylesheet">
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -25,7 +26,7 @@ permalink: /code/yolobrella/
             <h1>yolobrella</h1>
             <div id="instructions">
                 <h2>Instructions</h2>
-                <ul class="fa-ul" style="font-size: 13.5pt;">
+                <ul class="fa-ul">
                     <li><i class="fa-li fa fa-cloud fa-wobble"></i>
                         That undulating blob following your cursor around is a baby cloud.
                     </li>
@@ -52,12 +53,12 @@ permalink: /code/yolobrella/
         <div id="click2close">
             <div class="button" id="closebutton"><i class="fa fa-times"></i>  Close</div><br/>
             <div id="updown">
-                <div id="up">
+                <a id="up" href="#">
                     <i class="fa fa-caret-up fa-3x"></i>
-                </div>
-                <div id="down">
+                </a>
+                <a id="down" href="#">
                     <i class="fa fa-caret-down fa-3x"></i>
-                </div>
+                </a>
             </div>
         </div>
     </div>

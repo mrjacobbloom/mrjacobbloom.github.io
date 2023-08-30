@@ -53,16 +53,19 @@ var CurrentPos = new Object();
 
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-window.addEventListener('mousemove', function (evt) {
+function handleMouseMove(clientX, clientY) {
     if(notfailed) {
-        MousePos.x = evt.clientX;
-        MousePos.y = evt.clientY;
+        MousePos.x = clientX;
+        MousePos.y = clientY;
         if(instructions) {
             document.getElementById('titlebar').className = '';
             instructions = false;
         }
     }
-}, false);
+}
+
+window.addEventListener('mousemove', (evt) => handleMouseMove(evt.clientX, evt.clientY));
+window.addEventListener('touchstart', (evt) => handleMouseMove(evt.touches[0].clientX, evt.touches[0].clientY));
 
 window.addEventListener('resize', function (evt) {
     canvas.width = window.innerWidth;

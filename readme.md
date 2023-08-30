@@ -2,7 +2,7 @@ This is my website.
 
 ## installing
 
-I know literally noithing about Ruby or its ecosystem and this was a very scary
+I know literally nothing about Ruby or its ecosystem and this was a very scary
 installation process
 
 ```bash
@@ -16,6 +16,9 @@ bundle install
 ```bash
 npm run transpile
 npm run serve
+
+## Or if you can't deal with jekyll and just want to edit yolobrella
+npm run simpleServer
 ```
 
 Preview runs on `http://localhost:4000/`
