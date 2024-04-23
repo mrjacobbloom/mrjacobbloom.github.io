@@ -5,15 +5,13 @@ const taglines = [
   'codes like a pro',
   'has cool hair',
   'is a great speler',
-  'has a voice like an angel',
+  'has used a microwave',
   'smells nice (usually)',
-  // 'should be hired by you',
   'has been outside',
-  'does awesome music things',
   'looks good in clothing',
-  // 'doesn\'t like his own posts',
   'knows the ABC\'s backwards',
-  'never lies (not counting this)'
+  'never lies (not counting this)',
+  'gets enough sleep'
 ];
 
 // handle the intro animaton

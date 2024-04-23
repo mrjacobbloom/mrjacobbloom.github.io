@@ -9,6 +9,11 @@ export var PROJECTS = [
             analogDOM.createElement("p", null, "A user could create a post with what animal they saw and a description of the sighting. They could also add a location to their post using a Google Maps integration. Then, anyone around the world could see that post."))),
         buttons: [
             {
+                icon: 'play',
+                text: 'Video Walkthrough',
+                href: 'https://www.youtube.com/watch?v=MBrT0ZcP6OE'
+            },
+            {
                 icon: 'github',
                 text: 'GitHub Repo',
                 href: 'https://github.com/mrjacobbloom/teamWORK'
@@ -38,12 +43,12 @@ export var PROJECTS = [
                 "The most complicated and exciting part of Notochord is its declarative domain-specific language for describing a musical style, called",
                 ' ',
                 analogDOM.createElement("a", { href: "https://github.com/notochord/playback" }, "Playback"),
-                ". The Playback interpreter is a behemoth and work-in-progress, but I'm very excited about the direction it's headed. I'm in the process of porting it to TypsScript, and it uses a BNF parser generator."))),
+                ". The Playback interpreter is a behemoth and work-in-progress, but I'm very excited about the direction it's headed. I'm in the process of porting it to TypeScript, and it uses a BNF parser generator."))),
         buttons: [
             {
                 icon: 'play',
                 text: 'Try It',
-                href: 'http://notochord.herokuapp.com/'
+                href: 'https://notochord.github.io/'
             },
             {
                 icon: 'github',
@@ -100,7 +105,7 @@ export var PROJECTS = [
         title: 'Lettuce',
         videoSrc: '/assets/video/lettuce.mp4',
         technologies: ['JavaScript', 'BNF Parser'],
-        description: (analogDOM.createElement("p", null, "The Lettuce AST Explorer is an impletmentation of a toy language from my Principles of Programming Languages class. It started out as my experimentations with pattern matching in JS, but it grew into a full-blown BNF-powered parser and pattern-matching-powered interpreter. I gave a presentation on it in my class, if you'd like to check that out.")),
+        description: (analogDOM.createElement("p", null, "The Lettuce AST Explorer is an implementation of a toy language from my Principles of Programming Languages class. It started out as an experiment with pattern matching in JS, but it grew into a full-blown BNF-powered parser and pattern-matching-powered interpreter. I gave a presentation on it in my class, if you'd like to check that out.")),
         buttons: [
             {
                 icon: 'play',

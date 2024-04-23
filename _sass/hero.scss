@@ -10,11 +10,13 @@
   box-shadow: $shadow;
   background: $dark;
   text-decoration: none;
-  &:not(.carousel-cell):hover {
-    z-index: 3;
-    transform: $hoverscale;
-    .hero-bg {
-      opacity: 0.8;
+  @media (hover: hover) {
+    &:not(.carousel-cell):hover {
+      z-index: 3;
+      transform: $hoverscale;
+      .hero-bg {
+        opacity: 0.8;
+      }
     }
   }
   .hero-bg {

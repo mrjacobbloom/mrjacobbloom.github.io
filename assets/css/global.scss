@@ -76,9 +76,10 @@ body {
     color: $light;
     transition: all .4s;
     display: inline-block;
-    &:hover {
-      //color: lighten($dark, 10%);
-      transform: scale(1.1);
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
     }
     img {
       height: 35px;

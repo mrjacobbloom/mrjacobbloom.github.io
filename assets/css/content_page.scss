@@ -128,9 +128,11 @@ p, li {
   strong {
     font-weight: 300;
   }
-  &:hover {
-    background-color: lighten($dark, 10%);
-    transform: scale(1.05);
+  @media (hover: hover) {
+    &:hover {
+      background-color: lighten($dark, 10%);
+      transform: scale(1.05);
+    }
   }
   &:active {
     background-color: darken($light, 10%);
@@ -143,8 +145,10 @@ p, li {
   a {
     color: $dark;
     text-decoration: none;
-    &:hover {
-      color: $dark;
+    @media (hover: hover) {
+      &:hover {
+        color: $dark;
+      }
     }
     span {
       font-family: $display-font;

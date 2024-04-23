@@ -12,28 +12,73 @@
   left: 0;
 }
 
-/************** HERO ***************/
-@import "hero";
-.hero-mom {
+/************** PRIMARY BUTTONS ***************/
+.primary-buttons {
   display: flex;
   flex-wrap: wrap;
   height: calc(100vh - (#{$nav-height} + 30px));
   margin: 15px;
   margin-bottom: 0;
 }
-.hero {
-  flex: 1;
-  min-width: 40%;
-  max-width: 100%;
+.primary-button {
+  flex: 1 1 40%;
+  display: flex;
   margin: 15px;
-  &:hover {
-    z-index: 1;
-    transform: $hoverscale;
+  position: relative;
+  transition: transform .4s;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      z-index: 1;
+      transform: $hoverscale;
+    }
+  }
+}
+.primary-button-content {
+  display: inline-block;
+  color: $dark;
+  text-shadow: 0 0 5px $bg-grey;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25pt;
+  font-family: $display-font;
+  --starburst-delay: 0;
+  --starburst-angle: 0;
+}
+.primary-button-starburst {
+  font-size: 2rem;
+  position: absolute;
+  color: #aaa;
+  animation: 4s ease-out infinite starburst;
+  animation-delay: var(--starburst-delay);
+  transition: color .4s;
+  opacity: 0;
+  pointer-events: none;
+  @media (hover: hover) {
+    .primary-button:hover & {
+      animation-duration: 2s;
+      color: lighten($dark, 40%);
+    }
   }
 }
 
-.hero-bg.code-hero-bg {
-  object-position: top left;
+@keyframes starburst {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--starburst-angle)) translateX(20px) rotate(calc(-1 * var(--starburst-angle)));
+  }
+  10% { opacity: 1; }
+  60% { opacity: 0; }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--starburst-angle)) translateX(40vw) rotate(calc(-1 * var(--starburst-angle)));
+  }
 }
 
 /************** ABOUT ME STUFF ***************/
@@ -110,7 +155,7 @@ h2 {
   .content {
     top: $nav-height-mobile;
   }
-  .hero-mom {
+  .primary-buttons {
     flex-direction: column;
   }
   .scroll-message {

@@ -15,8 +15,10 @@
     color: $light;
     text-decoration: none;
   }
-  &:hover .wordmark-name {
-    transform: $hoverscale;
+  @media (hover: hover) {
+    &:hover .wordmark-name {
+      transform: $hoverscale;
+    }
   }
 }
 

@@ -21,6 +21,11 @@ export const PROJECTS: CodeProject[] = [
     ),
     buttons: [
       {
+        icon: 'play',
+        text: 'Video Walkthrough',
+        href: 'https://www.youtube.com/watch?v=MBrT0ZcP6OE'
+      },
+      {
         icon: 'github',
         text: 'GitHub Repo',
         href: 'https://github.com/mrjacobbloom/teamWORK',
@@ -66,7 +71,7 @@ export const PROJECTS: CodeProject[] = [
           domain-specific language for describing a musical style, called{' '}
           <a href="https://github.com/notochord/playback">Playback</a>. The Playback
           interpreter is a behemoth and work-in-progress, but I'm very excited about
-          the direction it's headed. I'm in the process of porting it to TypsScript,
+          the direction it's headed. I'm in the process of porting it to TypeScript,
           and it uses a BNF parser generator.
         </p>
       </>
@@ -75,7 +80,7 @@ export const PROJECTS: CodeProject[] = [
       {
         icon: 'play',
         text: 'Try It',
-        href: 'http://notochord.herokuapp.com/',
+        href: 'https://notochord.github.io/',
       },
       {
         icon: 'github',
@@ -151,9 +156,9 @@ export const PROJECTS: CodeProject[] = [
     technologies: ['JavaScript', 'BNF Parser'],
     description: (
       <p>
-        The Lettuce AST Explorer is an impletmentation of a toy language from my
-        Principles of Programming Languages class. It started out as my
-        experimentations with pattern matching in JS, but it grew into a
+        The Lettuce AST Explorer is an implementation of a toy language from my
+        Principles of Programming Languages class. It started out as an
+        experiment with pattern matching in JS, but it grew into a
         full-blown BNF-powered parser and pattern-matching-powered interpreter. I
         gave a presentation on it in my class, if you'd like to check that out.
       </p>
