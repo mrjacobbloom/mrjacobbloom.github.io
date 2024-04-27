@@ -157,6 +157,7 @@ h2 {
   }
   .primary-buttons {
     flex-direction: column;
+    height: calc(100vh - (#{$nav-height-mobile} + 30px));
   }
   .scroll-message {
     display: none;
