@@ -119,9 +119,9 @@ export const PROJECTS: CodeProject[] = [
     technologies: ['JavaScript', 'Unified Font Object'],
     description: (
       <p>
-        Liga Diga is a font that uses ligatures to automagically translate the top
-        300 most common English words into Spanish. Your days of using Google
-        Translate are over!
+        A generated front that uses ligatures (font symbols that substitute
+        groups of letters) to translate the top 300 words from English to
+        Spanish. Your days of using Google Translate are over!
       </p>
     ),
     buttons: [
